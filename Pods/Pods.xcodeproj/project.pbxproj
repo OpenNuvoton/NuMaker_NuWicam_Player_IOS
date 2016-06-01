@@ -1,0 +1,913 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07190D985189066DC10EC0514CE9CA0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
+		08E236FAB3661AA63DEAC846DB2E7ED8 /* UIView+JHChainableAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 18B334A1F7011A1B9AEB0BADEE09F2C6 /* UIView+JHChainableAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0BC83059B8F4E70B841C2EFB07745D6A /* qrencode.h in Headers */ = {isa = PBXBuildFile; fileRef = 365155A2AEF182E32600B2278340F1B6 /* qrencode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0BFA9967D58C383EF11958FF58FE2542 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EB95A2BFC4EEDECFF1AB2AAC161D4EB /* Security.framework */; };
+		11FE78B381486CDAEFC16305D051435C /* qrinput.c in Sources */ = {isa = PBXBuildFile; fileRef = 92614CBB0EBE0AC8D581A741CA2DD3E7 /* qrinput.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		18901D663C0DB7568D7D2D1BEC235F0A /* AsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D5978FD5E9398916C21D7F48EB9C5D /* AsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1BE05115600D3BDE5E104EF435A87368 /* AsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 54E98A376F6CA6CCDC412C087AEEDD0A /* AsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		296735F4CB61EE73818FF92448A10190 /* QRCodeGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CBA272E62AAB57120B7E33C7531B36 /* QRCodeGenerator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3348CBFB0E6BD6564B92D0458CD298E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
+		33D18B4DF750B48FD67AA803F9ED7629 /* JHChainableAnimations-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFADAE095688591F03B8362C8634F91 /* JHChainableAnimations-dummy.m */; };
+		3685FE3E072299D69ED9FFD8C69FE19D /* QRCodeGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = ECAADE3929151B3C6EA29BE8E2EA7B50 /* QRCodeGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4019EC63F971EC3E0632F0C0911DFA99 /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C9781E78AE69903237D53A3F586666B /* AsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4EFA149694181FD3E7EA7CC83F2060B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
+		52FFDE78FE7714F827583DBE414C14F2 /* rscode.h in Headers */ = {isa = PBXBuildFile; fileRef = C9D7AEA072DECF4F0333440B2B5B194D /* rscode.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5680EA35619DAEB49C16F818180183F7 /* JHKeyframeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CDEB8DA933EC464715340D5BBC95AB3 /* JHKeyframeAnimation.m */; };
+		5BAAC793BEF27E084CD7DAE026BD452C /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = BD59C96BFCCC0872AF2BFBD0677C46E7 /* qrspec.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5D6DC6D5B468CEBECCD3D16B970FD2B4 /* UIView+JHChainableAnimations.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E1C7FF024875753091958E6FE063C2 /* UIView+JHChainableAnimations.m */; };
+		5F6DF8A36479F63E2EAC487AC5A55869 /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 0BD24B52182B4F8F487DF4E06AFCEE16 /* bitstream.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		68B7C557ACDCEC370A68FE1C574A191D /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = C213A15C32DD320FE20C0E31A8DFC05D /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7495B4B5FB217631EB480A136800AE1A /* bitstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 73F57778651BF1A9396756A9217CC1B6 /* bitstream.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FCA10F62ED37C5F288AB90A2BFB7957 /* NSBKeyframeAnimationFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 698B311FB76EF09805FDAC0C5F1E3DBE /* NSBKeyframeAnimationFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8B73194CAE17AF3835E690D7FA02D35D /* JHChainableAnimations.h in Headers */ = {isa = PBXBuildFile; fileRef = 1393A4BACC68AB5490E96838B78160F8 /* JHChainableAnimations.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DA12B78F51AAF5775092B9E47E88F5B /* Pods-SkyEye-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EAA9FD6BBCD8A0728D080CCE77C7C92 /* Pods-SkyEye-dummy.m */; };
+		A7990BD59429797263F5B462384E8C1D /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BFC2AFDC6E14EECBCBCB6C49BC011FA /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		AA807E8B067BCAD683DD853CCC1C53C7 /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 60D4AF84CF0FBB5D2DCC2FDC91E7C8CC /* split.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B1D6444612DF75D29F8D625C3582A801 /* split.h in Headers */ = {isa = PBXBuildFile; fileRef = 58BC858871781AB4BE68B0B411446653 /* split.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B89CCAB19F932745786F951C9D848DA4 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B335DD7FA4FF5A755DE5FFE9BF6EB91 /* GCDAsyncUdpSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C54348CD0A0FE588BC8C8248775E4F10 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 04AAB17719967D3C50508BABE78D045F /* rscode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CA7665A98EAF65C279B78C2B8D71F218 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9884A3E734A6C509FDA6B7178B78FB39 /* CFNetwork.framework */; };
+		CDCB2867FCA0BE756B7D169D95957895 /* qrinput.h in Headers */ = {isa = PBXBuildFile; fileRef = 631908E316E42A5676C61342A2FEB6F6 /* qrinput.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D79B2A3554EA5484D94373D0B45E255C /* iOS-QR-Code-Encoder-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC75407D6167EAD5A4AE46567DBF4393 /* iOS-QR-Code-Encoder-dummy.m */; };
+		D8A5D517144551BA7DEB377C10445D99 /* mask.c in Sources */ = {isa = PBXBuildFile; fileRef = FA84F9C45C71D7195E3402647D7F0F87 /* mask.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		DC613E61253547229724CAE9A924F40D /* NSBKeyframeAnimationFunctions.c in Sources */ = {isa = PBXBuildFile; fileRef = 671751DDBC21A41A444BA62C01F5BF14 /* NSBKeyframeAnimationFunctions.c */; };
+		DC6CBDEDCDCBDAF59F0AFA4BA9480C0B /* JHKeyframeAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = F8D5C86E9580E41EE9328758157A78D9 /* JHKeyframeAnimation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC7EECFFFF44B58AC236D78E019C9725 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 04013A40BBFF191AE095A15E42E3FDB3 /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1B7972D916EC39DC39462C1D8B17223 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E25622134E357163CBC876BC355706 /* CocoaAsyncSocket-dummy.m */; };
+		E427D53B45D91D0C2480D90F174A0E88 /* mask.h in Headers */ = {isa = PBXBuildFile; fileRef = 32E0DDF62C60129B74E60C0A6DBBF573 /* mask.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E7828069BC78E0DE49CAE53EF8270E66 /* JHChainableBlocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 398F817BAF24805832E4EABAEA77747F /* JHChainableBlocks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8722146B3B2EE06AE3C9E50F23DD885 /* qrencode.c in Sources */ = {isa = PBXBuildFile; fileRef = 8836C9B1EB79D249180E1177E855CA3A /* qrencode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EA82EBA117844D5FC81378DA8CEC6B66 /* qrspec.h in Headers */ = {isa = PBXBuildFile; fileRef = CA8A2B785A56EA34B57E9E0DF5975645 /* qrspec.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EDA0DF31A313200BC1AA65CA0ECA1D4A /* AsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = A5EEE43B89D3BF7D83E973C5A1F67A50 /* AsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F01C647A1B1B75D7E619B7DCD77349B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		924D79BB4424B4012C6ECC60EE5E05C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45596EEF26239801B4852A0BF25FA724;
+			remoteInfo = "iOS-QR-Code-Encoder";
+		};
+		C0A101105B95E2F9CAEFD045FC24FACD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F27C9AB311EE00D38DCF3118AFEBA695;
+			remoteInfo = JHChainableAnimations;
+		};
+		F9336999E1BA2B1AA43DA5777E05F598 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48F687CDE9990BD471D7883061F7E5D4;
+			remoteInfo = CocoaAsyncSocket;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00D5978FD5E9398916C21D7F48EB9C5D /* AsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncSocket.m; path = Source/RunLoop/AsyncSocket.m; sourceTree = "<group>"; };
+		04013A40BBFF191AE095A15E42E3FDB3 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		04AAB17719967D3C50508BABE78D045F /* rscode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = rscode.c; path = libqrencode/rscode.c; sourceTree = "<group>"; };
+		06CBA272E62AAB57120B7E33C7531B36 /* QRCodeGenerator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeGenerator.m; path = Classes/QRCodeGenerator.m; sourceTree = "<group>"; };
+		0970F10F756F885A95B9005E14B54B39 /* Pods-SkyEye-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkyEye-frameworks.sh"; sourceTree = "<group>"; };
+		0BD24B52182B4F8F487DF4E06AFCEE16 /* bitstream.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = bitstream.c; path = libqrencode/bitstream.c; sourceTree = "<group>"; };
+		0BFC2AFDC6E14EECBCBCB6C49BC011FA /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
+		0C2B20CD08B4CCD875DCAE32D2289352 /* Pods-SkyEye-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SkyEye-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0FBBDE7A51D0A115BC2663859CDF574D /* JHChainableAnimations-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JHChainableAnimations-prefix.pch"; sourceTree = "<group>"; };
+		1393A4BACC68AB5490E96838B78160F8 /* JHChainableAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHChainableAnimations.h; path = JHChainableAnimations/JHChainableAnimations.h; sourceTree = "<group>"; };
+		18B334A1F7011A1B9AEB0BADEE09F2C6 /* UIView+JHChainableAnimations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+JHChainableAnimations.h"; path = "JHChainableAnimations/UIView+JHChainableAnimations.h"; sourceTree = "<group>"; };
+		1EAA9FD6BBCD8A0728D080CCE77C7C92 /* Pods-SkyEye-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SkyEye-dummy.m"; sourceTree = "<group>"; };
+		24DF44D6A0D5C20BF5504972A0FE2F67 /* Pods-SkyEye-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkyEye-resources.sh"; sourceTree = "<group>"; };
+		287071AA995C29F4C1A40F97C1E33C92 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		2EB95A2BFC4EEDECFF1AB2AAC161D4EB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		32E0DDF62C60129B74E60C0A6DBBF573 /* mask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mask.h; path = libqrencode/mask.h; sourceTree = "<group>"; };
+		34CC6C6AECC6AB1E6D49E9550F0E9016 /* Pods-SkyEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkyEye.release.xcconfig"; sourceTree = "<group>"; };
+		365155A2AEF182E32600B2278340F1B6 /* qrencode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrencode.h; path = libqrencode/qrencode.h; sourceTree = "<group>"; };
+		398F817BAF24805832E4EABAEA77747F /* JHChainableBlocks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHChainableBlocks.h; path = JHChainableAnimations/JHChainableBlocks.h; sourceTree = "<group>"; };
+		3A42BB6E33B7C0C625822138088B00B2 /* iOS-QR-Code-Encoder-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "iOS-QR-Code-Encoder-prefix.pch"; sourceTree = "<group>"; };
+		4689F317CA581832DFC1C2FABED4BC83 /* libJHChainableAnimations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJHChainableAnimations.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		46E1C7FF024875753091958E6FE063C2 /* UIView+JHChainableAnimations.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+JHChainableAnimations.m"; path = "JHChainableAnimations/UIView+JHChainableAnimations.m"; sourceTree = "<group>"; };
+		5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.xcconfig; sourceTree = "<group>"; };
+		54E98A376F6CA6CCDC412C087AEEDD0A /* AsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = Source/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		58BC858871781AB4BE68B0B411446653 /* split.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = split.h; path = libqrencode/split.h; sourceTree = "<group>"; };
+		5C9781E78AE69903237D53A3F586666B /* AsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = Source/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
+		5CDEB8DA933EC464715340D5BBC95AB3 /* JHKeyframeAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JHKeyframeAnimation.m; path = JHChainableAnimations/JHKeyframeAnimation.m; sourceTree = "<group>"; };
+		60D4AF84CF0FBB5D2DCC2FDC91E7C8CC /* split.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = split.c; path = libqrencode/split.c; sourceTree = "<group>"; };
+		631908E316E42A5676C61342A2FEB6F6 /* qrinput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrinput.h; path = libqrencode/qrinput.h; sourceTree = "<group>"; };
+		671751DDBC21A41A444BA62C01F5BF14 /* NSBKeyframeAnimationFunctions.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = NSBKeyframeAnimationFunctions.c; path = JHChainableAnimations/NSBKeyframeAnimationFunctions.c; sourceTree = "<group>"; };
+		68B0A34EC8FDD2DB7DB2C16B89CF6431 /* libiOS-QR-Code-Encoder.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libiOS-QR-Code-Encoder.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		698B311FB76EF09805FDAC0C5F1E3DBE /* NSBKeyframeAnimationFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NSBKeyframeAnimationFunctions.h; path = JHChainableAnimations/NSBKeyframeAnimationFunctions.h; sourceTree = "<group>"; };
+		6CFB59D37FFA13AAFDDA6887C556FB6A /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		73F57778651BF1A9396756A9217CC1B6 /* bitstream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bitstream.h; path = libqrencode/bitstream.h; sourceTree = "<group>"; };
+		7B335DD7FA4FF5A755DE5FFE9BF6EB91 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JHChainableAnimations.xcconfig; sourceTree = "<group>"; };
+		8836C9B1EB79D249180E1177E855CA3A /* qrencode.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrencode.c; path = libqrencode/qrencode.c; sourceTree = "<group>"; };
+		8EFADAE095688591F03B8362C8634F91 /* JHChainableAnimations-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JHChainableAnimations-dummy.m"; sourceTree = "<group>"; };
+		92614CBB0EBE0AC8D581A741CA2DD3E7 /* qrinput.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrinput.c; path = libqrencode/qrinput.c; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9884A3E734A6C509FDA6B7178B78FB39 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		A5EEE43B89D3BF7D83E973C5A1F67A50 /* AsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AsyncSocket.h; path = Source/RunLoop/AsyncSocket.h; sourceTree = "<group>"; };
+		A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B02BFC43F8E6770F248A7B253F936C84 /* Pods-SkyEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkyEye.debug.xcconfig"; sourceTree = "<group>"; };
+		BD59C96BFCCC0872AF2BFBD0677C46E7 /* qrspec.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = qrspec.c; path = libqrencode/qrspec.c; sourceTree = "<group>"; };
+		BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "iOS-QR-Code-Encoder.xcconfig"; sourceTree = "<group>"; };
+		C213A15C32DD320FE20C0E31A8DFC05D /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		C46C24C67F2A86F4EDCFFAEC6903D18C /* libCocoaAsyncSocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCocoaAsyncSocket.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D7AEA072DECF4F0333440B2B5B194D /* rscode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = rscode.h; path = libqrencode/rscode.h; sourceTree = "<group>"; };
+		CA8A2B785A56EA34B57E9E0DF5975645 /* qrspec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = qrspec.h; path = libqrencode/qrspec.h; sourceTree = "<group>"; };
+		CC75407D6167EAD5A4AE46567DBF4393 /* iOS-QR-Code-Encoder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "iOS-QR-Code-Encoder-dummy.m"; sourceTree = "<group>"; };
+		D5E25622134E357163CBC876BC355706 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		ECAADE3929151B3C6EA29BE8E2EA7B50 /* QRCodeGenerator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeGenerator.h; path = Classes/QRCodeGenerator.h; sourceTree = "<group>"; };
+		F8D5C86E9580E41EE9328758157A78D9 /* JHKeyframeAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JHKeyframeAnimation.h; path = JHChainableAnimations/JHKeyframeAnimation.h; sourceTree = "<group>"; };
+		FA84F9C45C71D7195E3402647D7F0F87 /* mask.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mask.c; path = libqrencode/mask.c; sourceTree = "<group>"; };
+		FBB15D9152BC19966C5D1CE6A4C73906 /* Pods-SkyEye-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SkyEye-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95B8EED6BAD122B29D3F6C06152F58A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EFA149694181FD3E7EA7CC83F2060B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E5691CD40E7E0DEBA63179AECE79114 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07190D985189066DC10EC0514CE9CA0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7A19B4E60C68A64462132F3C06AF8F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01C647A1B1B75D7E619B7DCD77349B2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA61A4D598C2FCF00934A59C326F7DAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA7665A98EAF65C279B78C2B8D71F218 /* CFNetwork.framework in Frameworks */,
+				3348CBFB0E6BD6564B92D0458CD298E7 /* Foundation.framework in Frameworks */,
+				0BFA9967D58C383EF11958FF58FE2542 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0AC7F508524843D11E0BC978DDDED02C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2B221F605588DA80961413014A8230CF /* CocoaAsyncSocket */,
+				A827B6AAD23EFB60C1E43561ECCB766E /* iOS-QR-Code-Encoder */,
+				DB5E9937F11ED9A2389FE972A564F15E /* JHChainableAnimations */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				773C25D7E0EFB5772CCEB5B20150615C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1AEEFCF02770C042E8C6915A40150652 /* Pods-SkyEye */ = {
+			isa = PBXGroup;
+			children = (
+				0C2B20CD08B4CCD875DCAE32D2289352 /* Pods-SkyEye-acknowledgements.markdown */,
+				FBB15D9152BC19966C5D1CE6A4C73906 /* Pods-SkyEye-acknowledgements.plist */,
+				1EAA9FD6BBCD8A0728D080CCE77C7C92 /* Pods-SkyEye-dummy.m */,
+				0970F10F756F885A95B9005E14B54B39 /* Pods-SkyEye-frameworks.sh */,
+				24DF44D6A0D5C20BF5504972A0FE2F67 /* Pods-SkyEye-resources.sh */,
+				B02BFC43F8E6770F248A7B253F936C84 /* Pods-SkyEye.debug.xcconfig */,
+				34CC6C6AECC6AB1E6D49E9550F0E9016 /* Pods-SkyEye.release.xcconfig */,
+			);
+			name = "Pods-SkyEye";
+			path = "Target Support Files/Pods-SkyEye";
+			sourceTree = "<group>";
+		};
+		2A0EB8F1FB4047E0D8C3829ADEA60200 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AEEFCF02770C042E8C6915A40150652 /* Pods-SkyEye */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2B221F605588DA80961413014A8230CF /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				4F64D76853EF61C13CE493EFA04BE993 /* GCD */,
+				697B88DA91CCC1307E53C0015367815B /* RunLoop */,
+				8A258EAFBA20EB10622A149528D15938 /* Support Files */,
+			);
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		4F64D76853EF61C13CE493EFA04BE993 /* GCD */ = {
+			isa = PBXGroup;
+			children = (
+				C213A15C32DD320FE20C0E31A8DFC05D /* GCDAsyncSocket.h */,
+				0BFC2AFDC6E14EECBCBCB6C49BC011FA /* GCDAsyncSocket.m */,
+				04013A40BBFF191AE095A15E42E3FDB3 /* GCDAsyncUdpSocket.h */,
+				7B335DD7FA4FF5A755DE5FFE9BF6EB91 /* GCDAsyncUdpSocket.m */,
+			);
+			name = GCD;
+			sourceTree = "<group>";
+		};
+		697B88DA91CCC1307E53C0015367815B /* RunLoop */ = {
+			isa = PBXGroup;
+			children = (
+				A5EEE43B89D3BF7D83E973C5A1F67A50 /* AsyncSocket.h */,
+				00D5978FD5E9398916C21D7F48EB9C5D /* AsyncSocket.m */,
+				54E98A376F6CA6CCDC412C087AEEDD0A /* AsyncUdpSocket.h */,
+				5C9781E78AE69903237D53A3F586666B /* AsyncUdpSocket.m */,
+			);
+			name = RunLoop;
+			sourceTree = "<group>";
+		};
+		773C25D7E0EFB5772CCEB5B20150615C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9884A3E734A6C509FDA6B7178B78FB39 /* CFNetwork.framework */,
+				A880B30F13DFD3E53674C49F7EC51AF2 /* Foundation.framework */,
+				2EB95A2BFC4EEDECFF1AB2AAC161D4EB /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				0AC7F508524843D11E0BC978DDDED02C /* Pods */,
+				7FB902E16A8DD5B8569ECDC700E5809B /* Products */,
+				2A0EB8F1FB4047E0D8C3829ADEA60200 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		7FB902E16A8DD5B8569ECDC700E5809B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C46C24C67F2A86F4EDCFFAEC6903D18C /* libCocoaAsyncSocket.a */,
+				68B0A34EC8FDD2DB7DB2C16B89CF6431 /* libiOS-QR-Code-Encoder.a */,
+				4689F317CA581832DFC1C2FABED4BC83 /* libJHChainableAnimations.a */,
+				6CFB59D37FFA13AAFDDA6887C556FB6A /* libPods-SkyEye.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A258EAFBA20EB10622A149528D15938 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */,
+				D5E25622134E357163CBC876BC355706 /* CocoaAsyncSocket-dummy.m */,
+				287071AA995C29F4C1A40F97C1E33C92 /* CocoaAsyncSocket-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		A827B6AAD23EFB60C1E43561ECCB766E /* iOS-QR-Code-Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				0BD24B52182B4F8F487DF4E06AFCEE16 /* bitstream.c */,
+				73F57778651BF1A9396756A9217CC1B6 /* bitstream.h */,
+				FA84F9C45C71D7195E3402647D7F0F87 /* mask.c */,
+				32E0DDF62C60129B74E60C0A6DBBF573 /* mask.h */,
+				ECAADE3929151B3C6EA29BE8E2EA7B50 /* QRCodeGenerator.h */,
+				06CBA272E62AAB57120B7E33C7531B36 /* QRCodeGenerator.m */,
+				8836C9B1EB79D249180E1177E855CA3A /* qrencode.c */,
+				365155A2AEF182E32600B2278340F1B6 /* qrencode.h */,
+				92614CBB0EBE0AC8D581A741CA2DD3E7 /* qrinput.c */,
+				631908E316E42A5676C61342A2FEB6F6 /* qrinput.h */,
+				BD59C96BFCCC0872AF2BFBD0677C46E7 /* qrspec.c */,
+				CA8A2B785A56EA34B57E9E0DF5975645 /* qrspec.h */,
+				04AAB17719967D3C50508BABE78D045F /* rscode.c */,
+				C9D7AEA072DECF4F0333440B2B5B194D /* rscode.h */,
+				60D4AF84CF0FBB5D2DCC2FDC91E7C8CC /* split.c */,
+				58BC858871781AB4BE68B0B411446653 /* split.h */,
+				BC3E3597BAAD85588D27F014CD581AE3 /* Support Files */,
+			);
+			path = "iOS-QR-Code-Encoder";
+			sourceTree = "<group>";
+		};
+		BC3E3597BAAD85588D27F014CD581AE3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */,
+				CC75407D6167EAD5A4AE46567DBF4393 /* iOS-QR-Code-Encoder-dummy.m */,
+				3A42BB6E33B7C0C625822138088B00B2 /* iOS-QR-Code-Encoder-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/iOS-QR-Code-Encoder";
+			sourceTree = "<group>";
+		};
+		DB5E9937F11ED9A2389FE972A564F15E /* JHChainableAnimations */ = {
+			isa = PBXGroup;
+			children = (
+				1393A4BACC68AB5490E96838B78160F8 /* JHChainableAnimations.h */,
+				398F817BAF24805832E4EABAEA77747F /* JHChainableBlocks.h */,
+				F8D5C86E9580E41EE9328758157A78D9 /* JHKeyframeAnimation.h */,
+				5CDEB8DA933EC464715340D5BBC95AB3 /* JHKeyframeAnimation.m */,
+				671751DDBC21A41A444BA62C01F5BF14 /* NSBKeyframeAnimationFunctions.c */,
+				698B311FB76EF09805FDAC0C5F1E3DBE /* NSBKeyframeAnimationFunctions.h */,
+				18B334A1F7011A1B9AEB0BADEE09F2C6 /* UIView+JHChainableAnimations.h */,
+				46E1C7FF024875753091958E6FE063C2 /* UIView+JHChainableAnimations.m */,
+				EB201B8DF3832490B90BDB138553C29D /* Support Files */,
+			);
+			path = JHChainableAnimations;
+			sourceTree = "<group>";
+		};
+		EB201B8DF3832490B90BDB138553C29D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */,
+				8EFADAE095688591F03B8362C8634F91 /* JHChainableAnimations-dummy.m */,
+				0FBBDE7A51D0A115BC2663859CDF574D /* JHChainableAnimations-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JHChainableAnimations";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0B0BF402CE206C7FF03D2F49C0C43EE5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B73194CAE17AF3835E690D7FA02D35D /* JHChainableAnimations.h in Headers */,
+				E7828069BC78E0DE49CAE53EF8270E66 /* JHChainableBlocks.h in Headers */,
+				DC6CBDEDCDCBDAF59F0AFA4BA9480C0B /* JHKeyframeAnimation.h in Headers */,
+				7FCA10F62ED37C5F288AB90A2BFB7957 /* NSBKeyframeAnimationFunctions.h in Headers */,
+				08E236FAB3661AA63DEAC846DB2E7ED8 /* UIView+JHChainableAnimations.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C6F95933C9F98A353584A47D83D1A51 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7495B4B5FB217631EB480A136800AE1A /* bitstream.h in Headers */,
+				E427D53B45D91D0C2480D90F174A0E88 /* mask.h in Headers */,
+				3685FE3E072299D69ED9FFD8C69FE19D /* QRCodeGenerator.h in Headers */,
+				0BC83059B8F4E70B841C2EFB07745D6A /* qrencode.h in Headers */,
+				CDCB2867FCA0BE756B7D169D95957895 /* qrinput.h in Headers */,
+				EA82EBA117844D5FC81378DA8CEC6B66 /* qrspec.h in Headers */,
+				52FFDE78FE7714F827583DBE414C14F2 /* rscode.h in Headers */,
+				B1D6444612DF75D29F8D625C3582A801 /* split.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		726A71FBB14447C7F1215523A376F792 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDA0DF31A313200BC1AA65CA0ECA1D4A /* AsyncSocket.h in Headers */,
+				1BE05115600D3BDE5E104EF435A87368 /* AsyncUdpSocket.h in Headers */,
+				68B7C557ACDCEC370A68FE1C574A191D /* GCDAsyncSocket.h in Headers */,
+				DC7EECFFFF44B58AC236D78E019C9725 /* GCDAsyncUdpSocket.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		45596EEF26239801B4852A0BF25FA724 /* iOS-QR-Code-Encoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DF8EB65916FB044DE9C7AB9AB8ABA227 /* Build configuration list for PBXNativeTarget "iOS-QR-Code-Encoder" */;
+			buildPhases = (
+				42165DC88F6001863FD9416DAC0E5845 /* Sources */,
+				95B8EED6BAD122B29D3F6C06152F58A5 /* Frameworks */,
+				3C6F95933C9F98A353584A47D83D1A51 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-QR-Code-Encoder";
+			productName = "iOS-QR-Code-Encoder";
+			productReference = 68B0A34EC8FDD2DB7DB2C16B89CF6431 /* libiOS-QR-Code-Encoder.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		48F687CDE9990BD471D7883061F7E5D4 /* CocoaAsyncSocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C1116D87925C21457A7F3C328B42698 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */;
+			buildPhases = (
+				1AAD49792CE16288963C8FA82C8068BB /* Sources */,
+				EA61A4D598C2FCF00934A59C326F7DAC /* Frameworks */,
+				726A71FBB14447C7F1215523A376F792 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocoaAsyncSocket;
+			productName = CocoaAsyncSocket;
+			productReference = C46C24C67F2A86F4EDCFFAEC6903D18C /* libCocoaAsyncSocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D14CE8B1670F74F6608A159DB1399AEB /* Pods-SkyEye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEF9F994FDF88FB63DB744F3817FFBA1 /* Build configuration list for PBXNativeTarget "Pods-SkyEye" */;
+			buildPhases = (
+				05AA8DA2F1785DDD539D3E75CF4E81E7 /* Sources */,
+				A7A19B4E60C68A64462132F3C06AF8F8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65454E8119E79BC73B0C3BD250388AE1 /* PBXTargetDependency */,
+				CDB720AB1997166FF2CAB57C057B531E /* PBXTargetDependency */,
+				FFCC3C96E9FC62345F8556C665D3BAA9 /* PBXTargetDependency */,
+			);
+			name = "Pods-SkyEye";
+			productName = "Pods-SkyEye";
+			productReference = 6CFB59D37FFA13AAFDDA6887C556FB6A /* libPods-SkyEye.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F27C9AB311EE00D38DCF3118AFEBA695 /* JHChainableAnimations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCF8722EEFF2D3800415714656F9B1C5 /* Build configuration list for PBXNativeTarget "JHChainableAnimations" */;
+			buildPhases = (
+				DC1148C175E4898546ED513F9A3CAA49 /* Sources */,
+				9E5691CD40E7E0DEBA63179AECE79114 /* Frameworks */,
+				0B0BF402CE206C7FF03D2F49C0C43EE5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JHChainableAnimations;
+			productName = JHChainableAnimations;
+			productReference = 4689F317CA581832DFC1C2FABED4BC83 /* libJHChainableAnimations.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 7FB902E16A8DD5B8569ECDC700E5809B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48F687CDE9990BD471D7883061F7E5D4 /* CocoaAsyncSocket */,
+				45596EEF26239801B4852A0BF25FA724 /* iOS-QR-Code-Encoder */,
+				F27C9AB311EE00D38DCF3118AFEBA695 /* JHChainableAnimations */,
+				D14CE8B1670F74F6608A159DB1399AEB /* Pods-SkyEye */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05AA8DA2F1785DDD539D3E75CF4E81E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DA12B78F51AAF5775092B9E47E88F5B /* Pods-SkyEye-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1AAD49792CE16288963C8FA82C8068BB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18901D663C0DB7568D7D2D1BEC235F0A /* AsyncSocket.m in Sources */,
+				4019EC63F971EC3E0632F0C0911DFA99 /* AsyncUdpSocket.m in Sources */,
+				E1B7972D916EC39DC39462C1D8B17223 /* CocoaAsyncSocket-dummy.m in Sources */,
+				A7990BD59429797263F5B462384E8C1D /* GCDAsyncSocket.m in Sources */,
+				B89CCAB19F932745786F951C9D848DA4 /* GCDAsyncUdpSocket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42165DC88F6001863FD9416DAC0E5845 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6DF8A36479F63E2EAC487AC5A55869 /* bitstream.c in Sources */,
+				D79B2A3554EA5484D94373D0B45E255C /* iOS-QR-Code-Encoder-dummy.m in Sources */,
+				D8A5D517144551BA7DEB377C10445D99 /* mask.c in Sources */,
+				296735F4CB61EE73818FF92448A10190 /* QRCodeGenerator.m in Sources */,
+				E8722146B3B2EE06AE3C9E50F23DD885 /* qrencode.c in Sources */,
+				11FE78B381486CDAEFC16305D051435C /* qrinput.c in Sources */,
+				5BAAC793BEF27E084CD7DAE026BD452C /* qrspec.c in Sources */,
+				C54348CD0A0FE588BC8C8248775E4F10 /* rscode.c in Sources */,
+				AA807E8B067BCAD683DD853CCC1C53C7 /* split.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DC1148C175E4898546ED513F9A3CAA49 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33D18B4DF750B48FD67AA803F9ED7629 /* JHChainableAnimations-dummy.m in Sources */,
+				5680EA35619DAEB49C16F818180183F7 /* JHKeyframeAnimation.m in Sources */,
+				DC613E61253547229724CAE9A924F40D /* NSBKeyframeAnimationFunctions.c in Sources */,
+				5D6DC6D5B468CEBECCD3D16B970FD2B4 /* UIView+JHChainableAnimations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65454E8119E79BC73B0C3BD250388AE1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 48F687CDE9990BD471D7883061F7E5D4 /* CocoaAsyncSocket */;
+			targetProxy = F9336999E1BA2B1AA43DA5777E05F598 /* PBXContainerItemProxy */;
+		};
+		CDB720AB1997166FF2CAB57C057B531E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JHChainableAnimations;
+			target = F27C9AB311EE00D38DCF3118AFEBA695 /* JHChainableAnimations */;
+			targetProxy = C0A101105B95E2F9CAEFD045FC24FACD /* PBXContainerItemProxy */;
+		};
+		FFCC3C96E9FC62345F8556C665D3BAA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "iOS-QR-Code-Encoder";
+			target = 45596EEF26239801B4852A0BF25FA724 /* iOS-QR-Code-Encoder */;
+			targetProxy = 924D79BB4424B4012C6ECC60EE5E05C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		11035AB40AAC29D5899704C622C0D59D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34CC6C6AECC6AB1E6D49E9550F0E9016 /* Pods-SkyEye.release.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2C442C92732ADBDBFA54CF4EA7B71CDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		50A6818E6BE5E8938F83CF20409E7E46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7466178B8588AAA87F70F8439F71F371 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOS-QR-Code-Encoder/iOS-QR-Code-Encoder-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		85320092DB4024BA5D20613D069555E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5457BD9F22808075F47EE279D2E6862A /* CocoaAsyncSocket.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		97C86E143A7AE7752414E75D5D2216B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JHChainableAnimations/JHChainableAnimations-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A2E9A188B7CB3432FC5D1F4A862280F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B02BFC43F8E6770F248A7B253F936C84 /* Pods-SkyEye.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C53CE9CC8C277164FF987E256B3904C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BEC7F06B2AC5341ADDC6BD3692848A9B /* iOS-QR-Code-Encoder.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/iOS-QR-Code-Encoder/iOS-QR-Code-Encoder-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C951E0637D6CECA1A59545C0E0C35217 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8570457F6B6C2D69B00B0D4D6D7DB4C0 /* JHChainableAnimations.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv7s,
+					arm64,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JHChainableAnimations/JHChainableAnimations-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DB44C5CA5E7AC762546FE4E73ED003F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB44C5CA5E7AC762546FE4E73ED003F3 /* Debug */,
+				2C442C92732ADBDBFA54CF4EA7B71CDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8C1116D87925C21457A7F3C328B42698 /* Build configuration list for PBXNativeTarget "CocoaAsyncSocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85320092DB4024BA5D20613D069555E6 /* Debug */,
+				50A6818E6BE5E8938F83CF20409E7E46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEF9F994FDF88FB63DB744F3817FFBA1 /* Build configuration list for PBXNativeTarget "Pods-SkyEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2E9A188B7CB3432FC5D1F4A862280F1 /* Debug */,
+				11035AB40AAC29D5899704C622C0D59D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCF8722EEFF2D3800415714656F9B1C5 /* Build configuration list for PBXNativeTarget "JHChainableAnimations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C951E0637D6CECA1A59545C0E0C35217 /* Debug */,
+				97C86E143A7AE7752414E75D5D2216B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DF8EB65916FB044DE9C7AB9AB8ABA227 /* Build configuration list for PBXNativeTarget "iOS-QR-Code-Encoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C53CE9CC8C277164FF987E256B3904C2 /* Debug */,
+				7466178B8588AAA87F70F8439F71F371 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

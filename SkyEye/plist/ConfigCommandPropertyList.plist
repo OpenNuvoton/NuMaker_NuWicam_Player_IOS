@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>List Wi-Fi Parameters</string>
+		<key>Base Command</key>
+		<string>param.cgi?action=list&amp;group=wifi</string>
+		<key>action</key>
+		<string>list</string>
+		<key>group</key>
+		<string>wifi</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Update Wi-Fi Parameters</string>
+		<key>Base Command</key>
+		<string>/param.cgi?action=update&amp;group=wifi</string>
+		<key>BOOTPROTO</key>
+		<string>DHCP</string>
+		<key>IPADDR</key>
+		<string>0.0.0.0</string>
+		<key>GATEWAY</key>
+		<string>0.0.0.0</string>
+		<key>SSID</key>
+		<string>String</string>
+		<key>AUTH_MODE</key>
+		<string>WPAPSK</string>
+		<key>ENCRYPT_TYPE</key>
+		<string>WEP</string>
+		<key>AUTH_KEY</key>
+		<string>String</string>
+		<key>WPS_TRIG_KEY</key>
+		<string>HOME</string>
+		<key>AP_SSID</key>
+		<string>NuWicam</string>
+		<key>AP_AUTH_KEY</key>
+		<string>12345678</string>
+		<key>AP_CHANNEL</key>
+		<string>1</string>
+	</dict>
+</array>
+</plist>

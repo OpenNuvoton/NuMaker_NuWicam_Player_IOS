@@ -1,0 +1,1 @@
+../../../iOS-QR-Code-Encoder/libqrencode/split.h

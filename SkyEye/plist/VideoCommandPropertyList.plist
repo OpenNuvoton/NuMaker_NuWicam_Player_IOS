@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Name</key>
+		<string>List Stream Parameters</string>
+		<key>Base Command</key>
+		<string>param.cgi?action=list&amp;group=stream</string>
+	</dict>
+	<dict>
+		<key>Name</key>
+		<string>Update Stream Parameters</string>
+		<key>Base Command</key>
+		<string>param.cgi?action=update&amp;group=stream</string>
+		<key>VINWIDTH</key>
+		<string>640</string>
+		<key>VINHEIGHT</key>
+		<string>480</string>
+		<key>JPEGENCWIDTH</key>
+		<string>640</string>
+		<key>JPEGENCHEIGHT</key>
+		<string>480</string>
+		<key>BITRATE</key>
+		<string>4096</string>
+	</dict>
+</array>
+</plist>

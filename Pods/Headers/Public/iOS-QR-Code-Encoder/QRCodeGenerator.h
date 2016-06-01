@@ -1,0 +1,1 @@
+../../../iOS-QR-Code-Encoder/Classes/QRCodeGenerator.h

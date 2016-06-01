@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Setup Camera</key>
+	<dict>
+		<key>Wi-Fi AP Setup</key>
+		<dict>
+			<key>SSID</key>
+			<string>ssid</string>
+			<key>password</key>
+			<string>password</string>
+		</dict>
+		<key>Transmission</key>
+		<string>UDP</string>
+		<key>Mute</key>
+		<string>ON</string>
+		<key>Device Info</key>
+		<dict>
+			<key>Available Storage</key>
+			<string></string>
+			<key>Recorder Status</key>
+			<string></string>
+		</dict>
+		<key>Serial</key>
+		<string>1</string>
+		<key>Name</key>
+		<string>LOCAL-IP</string>
+		<key>URL</key>
+		<string>rtsp://192.168.100.1/cam1/mpeg4</string>
+		<key>Resolution</key>
+		<string>1</string>
+		<key>Encode Quality</key>
+		<string>1</string>
+		<key>Bit Rate</key>
+		<string>6000</string>
+		<key>FPS</key>
+		<string>30</string>
+		<key>History</key>
+		<array>
+			<string>rtsp://192.168.100.1/cam1/mpeg4</string>
+			<string>-</string>
+			<string>-</string>
+			<string>-</string>
+			<string>-</string>
+		</array>
+	</dict>
+</dict>
+</plist>

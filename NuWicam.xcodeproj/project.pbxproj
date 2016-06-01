@@ -1,0 +1,917 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08318F4550DAD5E4E36E727B /* libPods-SkyEye.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F8C5BE0FDB581005B079354 /* libPods-SkyEye.a */; };
+		560112B51CA3EBDD00ABB3CE /* SocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927BA1C92B33900717A2A /* SocketManager.m */; };
+		561E842B1C4C848A00B62BCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 561E842A1C4C848A00B62BCF /* main.m */; };
+		561E842E1C4C848A00B62BCF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 561E842D1C4C848A00B62BCF /* AppDelegate.m */; };
+		561E84341C4C848A00B62BCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E84321C4C848A00B62BCF /* Main.storyboard */; };
+		561E84361C4C848A00B62BCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 561E84351C4C848A00B62BCF /* Assets.xcassets */; };
+		561E84391C4C848A00B62BCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 561E84371C4C848A00B62BCF /* LaunchScreen.storyboard */; };
+		561E84441C4C848A00B62BCF /* SkyEyeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 561E84431C4C848A00B62BCF /* SkyEyeTests.m */; };
+		561E844F1C4C848A00B62BCF /* SkyEyeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 561E844E1C4C848A00B62BCF /* SkyEyeUITests.m */; };
+		562A99301C5F254D00852B9A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A992F1C5F254D00852B9A /* AVFoundation.framework */; };
+		562A99321C5F255700852B9A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99311C5F255700852B9A /* AudioToolbox.framework */; };
+		562A99341C5F256000852B9A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99331C5F256000852B9A /* CoreGraphics.framework */; };
+		562A99361C5F258900852B9A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99351C5F258900852B9A /* CoreMedia.framework */; };
+		562A99381C5F259900852B9A /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99371C5F259900852B9A /* CoreVideo.framework */; };
+		562A993A1C5F25A700852B9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99391C5F25A700852B9A /* Foundation.framework */; };
+		562A993C1C5F25B000852B9A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A993B1C5F25B000852B9A /* MediaPlayer.framework */; };
+		562A993E1C5F25B900852B9A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A993D1C5F25B900852B9A /* OpenGLES.framework */; };
+		562A99401C5F25C200852B9A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A993F1C5F25C200852B9A /* QuartzCore.framework */; };
+		562A99421C5F25C900852B9A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99411C5F25C900852B9A /* UIKit.framework */; };
+		562A99441C5F25D500852B9A /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99431C5F25D500852B9A /* libbz2.tbd */; };
+		562A99461C5F25DF00852B9A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99451C5F25DF00852B9A /* libz.tbd */; };
+		562A99481C5F25E800852B9A /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99471C5F25E700852B9A /* libstdc++.tbd */; };
+		562A994A1C5F25F000852B9A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 562A99491C5F25F000852B9A /* libiconv.tbd */; };
+		563927AC1C92B2C500717A2A /* ConfigCommandPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 563927A01C92B2C500717A2A /* ConfigCommandPropertyList.plist */; };
+		563927B41C92B2C500717A2A /* SettingsPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 563927A81C92B2C500717A2A /* SettingsPropertyList.plist */; };
+		563927B51C92B2C500717A2A /* SystemCommandPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 563927A91C92B2C500717A2A /* SystemCommandPropertyList.plist */; };
+		563927B61C92B2C500717A2A /* VideoCommandPropertyList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 563927AA1C92B2C500717A2A /* VideoCommandPropertyList.plist */; };
+		563927BB1C92B33900717A2A /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927B81C92B33900717A2A /* PlayerManager.m */; };
+		563927DC1C92B3CF00717A2A /* CommandPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927D21C92B3CF00717A2A /* CommandPool.m */; };
+		563927DF1C92B3CF00717A2A /* SettingPool.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927D81C92B3CF00717A2A /* SettingPool.m */; };
+		563927EA1C92B41500717A2A /* RecieveDataParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927E31C92B41500717A2A /* RecieveDataParser.m */; };
+		563927EB1C92B41500717A2A /* SkyEyeCommandGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927E61C92B41500717A2A /* SkyEyeCommandGenerator.m */; };
+		563927EC1C92B41500717A2A /* SkyEyeCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927E81C92B41500717A2A /* SkyEyeCommandParser.m */; };
+		563927F81C92B46D00717A2A /* MultipleSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927F01C92B46D00717A2A /* MultipleSettingTableViewController.m */; };
+		563928091C92B48600717A2A /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563928061C92B48600717A2A /* LiveViewController.m */; };
+		568CF8C91CAB7DB700A58490 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 568CF8C81CAB7DB700A58490 /* libc++.tbd */; };
+		56955CEC1CC222530028E78C /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEA1CC222530028E78C /* Default-568h.png */; };
+		56955CED1CC222530028E78C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEB1CC222530028E78C /* Default-568h@2x.png */; };
+		569FAB191CEC44F100D1E547 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FAB181CEC44F100D1E547 /* SettingViewController.m */; };
+		56E40E171C996CAA00DDB8A6 /* liblzma.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E161C996CAA00DDB8A6 /* liblzma.tbd */; };
+		56E40E181C996CBD00DDB8A6 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E0F1C996C4700DDB8A6 /* libavcodec.a */; };
+		56E40E191C996CBD00DDB8A6 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E101C996C4700DDB8A6 /* libavdevice.a */; };
+		56E40E1A1C996CBD00DDB8A6 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E111C996C4700DDB8A6 /* libavfilter.a */; };
+		56E40E1B1C996CBD00DDB8A6 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E121C996C4700DDB8A6 /* libavformat.a */; };
+		56E40E1C1C996CBD00DDB8A6 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E131C996C4700DDB8A6 /* libavutil.a */; };
+		56E40E1D1C996CBD00DDB8A6 /* libswresample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E141C996C4700DDB8A6 /* libswresample.a */; };
+		56E40E1E1C996CBD00DDB8A6 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E40E151C996C4700DDB8A6 /* libswscale.a */; };
+		56FA66C61CB65CED0004DB32 /* AudioStreamer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA66C11CB65CED0004DB32 /* AudioStreamer.m */; };
+		56FA66C71CB65CED0004DB32 /* RTSPPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 56FA66C31CB65CED0004DB32 /* RTSPPlayer.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		561E84401C4C848A00B62BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 561E841E1C4C848A00B62BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 561E84251C4C848A00B62BCF;
+			remoteInfo = SkyEye;
+		};
+		561E844B1C4C848A00B62BCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 561E841E1C4C848A00B62BCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 561E84251C4C848A00B62BCF;
+			remoteInfo = SkyEye;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04DA03A52CE2D3A3A9D51F01 /* Pods-SkyEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEye.release.xcconfig"; path = "Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye.release.xcconfig"; sourceTree = "<group>"; };
+		560112B31CA3EBB000ABB3CE /* VideoToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VideoToolbox.framework; path = System/Library/Frameworks/VideoToolbox.framework; sourceTree = SDKROOT; };
+		561E84261C4C848A00B62BCF /* SkyEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkyEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		561E842A1C4C848A00B62BCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		561E842C1C4C848A00B62BCF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		561E842D1C4C848A00B62BCF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		561E84331C4C848A00B62BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		561E84351C4C848A00B62BCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		561E84381C4C848A00B62BCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		561E843A1C4C848A00B62BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		561E843F1C4C848A00B62BCF /* SkyEyeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyEyeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		561E84431C4C848A00B62BCF /* SkyEyeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyEyeTests.m; sourceTree = "<group>"; };
+		561E84451C4C848A00B62BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		561E844A1C4C848A00B62BCF /* SkyEyeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkyEyeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		561E844E1C4C848A00B62BCF /* SkyEyeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkyEyeUITests.m; sourceTree = "<group>"; };
+		561E84501C4C848A00B62BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		562A992F1C5F254D00852B9A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		562A99311C5F255700852B9A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		562A99331C5F256000852B9A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		562A99351C5F258900852B9A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		562A99371C5F259900852B9A /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		562A99391C5F25A700852B9A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		562A993B1C5F25B000852B9A /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		562A993D1C5F25B900852B9A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		562A993F1C5F25C200852B9A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		562A99411C5F25C900852B9A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		562A99431C5F25D500852B9A /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = usr/lib/libbz2.tbd; sourceTree = SDKROOT; };
+		562A99451C5F25DF00852B9A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		562A99471C5F25E700852B9A /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		562A99491C5F25F000852B9A /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		563927A01C92B2C500717A2A /* ConfigCommandPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ConfigCommandPropertyList.plist; path = plist/ConfigCommandPropertyList.plist; sourceTree = "<group>"; };
+		563927A81C92B2C500717A2A /* SettingsPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SettingsPropertyList.plist; path = plist/SettingsPropertyList.plist; sourceTree = "<group>"; };
+		563927A91C92B2C500717A2A /* SystemCommandPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SystemCommandPropertyList.plist; path = plist/SystemCommandPropertyList.plist; sourceTree = "<group>"; };
+		563927AA1C92B2C500717A2A /* VideoCommandPropertyList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = VideoCommandPropertyList.plist; path = plist/VideoCommandPropertyList.plist; sourceTree = "<group>"; };
+		563927B71C92B33900717A2A /* PlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayerManager.h; path = "SyEye Prototype And Delegate/PlayerManager.h"; sourceTree = "<group>"; };
+		563927B81C92B33900717A2A /* PlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayerManager.m; path = "SyEye Prototype And Delegate/PlayerManager.m"; sourceTree = "<group>"; };
+		563927B91C92B33900717A2A /* SocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SocketManager.h; path = "SyEye Prototype And Delegate/SocketManager.h"; sourceTree = "<group>"; };
+		563927BA1C92B33900717A2A /* SocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SocketManager.m; path = "SyEye Prototype And Delegate/SocketManager.m"; sourceTree = "<group>"; };
+		563927D11C92B3CF00717A2A /* CommandPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommandPool.h; path = "SyEye Prototype And Delegate/Data Class/CommandPool.h"; sourceTree = "<group>"; };
+		563927D21C92B3CF00717A2A /* CommandPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommandPool.m; path = "SyEye Prototype And Delegate/Data Class/CommandPool.m"; sourceTree = "<group>"; };
+		563927D71C92B3CF00717A2A /* SettingPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingPool.h; path = "SyEye Prototype And Delegate/Data Class/SettingPool.h"; sourceTree = "<group>"; };
+		563927D81C92B3CF00717A2A /* SettingPool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingPool.m; path = "SyEye Prototype And Delegate/Data Class/SettingPool.m"; sourceTree = "<group>"; };
+		563927E21C92B41500717A2A /* RecieveDataParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecieveDataParser.h; path = "SyEye Prototype And Delegate/Command Generator/RecieveDataParser.h"; sourceTree = "<group>"; };
+		563927E31C92B41500717A2A /* RecieveDataParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecieveDataParser.m; path = "SyEye Prototype And Delegate/Command Generator/RecieveDataParser.m"; sourceTree = "<group>"; };
+		563927E51C92B41500717A2A /* SkyEyeCommandGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkyEyeCommandGenerator.h; path = "SyEye Prototype And Delegate/Command Generator/SkyEyeCommandGenerator.h"; sourceTree = "<group>"; };
+		563927E61C92B41500717A2A /* SkyEyeCommandGenerator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkyEyeCommandGenerator.m; path = "SyEye Prototype And Delegate/Command Generator/SkyEyeCommandGenerator.m"; sourceTree = "<group>"; };
+		563927E71C92B41500717A2A /* SkyEyeCommandParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SkyEyeCommandParser.h; path = "SyEye Prototype And Delegate/Command Generator/SkyEyeCommandParser.h"; sourceTree = "<group>"; };
+		563927E81C92B41500717A2A /* SkyEyeCommandParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SkyEyeCommandParser.m; path = "SyEye Prototype And Delegate/Command Generator/SkyEyeCommandParser.m"; sourceTree = "<group>"; };
+		563927EF1C92B46D00717A2A /* MultipleSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultipleSettingTableViewController.h; path = "SkyEye ViewController Group/SettingControllers/MultipleSettingTableViewController.h"; sourceTree = "<group>"; };
+		563927F01C92B46D00717A2A /* MultipleSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultipleSettingTableViewController.m; path = "SkyEye ViewController Group/SettingControllers/MultipleSettingTableViewController.m"; sourceTree = "<group>"; };
+		563928051C92B48600717A2A /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveViewController.h; path = "SkyEye ViewController Group/LiveViewController.h"; sourceTree = "<group>"; };
+		563928061C92B48600717A2A /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveViewController.m; path = "SkyEye ViewController Group/LiveViewController.m"; sourceTree = "<group>"; };
+		5639280B1C92B5DC00717A2A /* SkyEye-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkyEye-Bridging-Header.h"; sourceTree = "<group>"; };
+		568CF8C81CAB7DB700A58490 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		56955CEA1CC222530028E78C /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
+		56955CEB1CC222530028E78C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		569FAB171CEC44F100D1E547 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingViewController.h; path = "SkyEye ViewController Group/SettingControllers/SettingViewController.h"; sourceTree = "<group>"; };
+		569FAB181CEC44F100D1E547 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingViewController.m; path = "SkyEye ViewController Group/SettingControllers/SettingViewController.m"; sourceTree = "<group>"; };
+		56E40E0F1C996C4700DDB8A6 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = "FFmpeg-iOS/lib/libavcodec.a"; sourceTree = "<group>"; };
+		56E40E101C996C4700DDB8A6 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = "FFmpeg-iOS/lib/libavdevice.a"; sourceTree = "<group>"; };
+		56E40E111C996C4700DDB8A6 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = "FFmpeg-iOS/lib/libavfilter.a"; sourceTree = "<group>"; };
+		56E40E121C996C4700DDB8A6 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = "FFmpeg-iOS/lib/libavformat.a"; sourceTree = "<group>"; };
+		56E40E131C996C4700DDB8A6 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = "FFmpeg-iOS/lib/libavutil.a"; sourceTree = "<group>"; };
+		56E40E141C996C4700DDB8A6 /* libswresample.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswresample.a; path = "FFmpeg-iOS/lib/libswresample.a"; sourceTree = "<group>"; };
+		56E40E151C996C4700DDB8A6 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = "FFmpeg-iOS/lib/libswscale.a"; sourceTree = "<group>"; };
+		56E40E161C996CAA00DDB8A6 /* liblzma.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = liblzma.tbd; path = usr/lib/liblzma.tbd; sourceTree = SDKROOT; };
+		56FA66C01CB65CED0004DB32 /* AudioStreamer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioStreamer.h; sourceTree = "<group>"; };
+		56FA66C11CB65CED0004DB32 /* AudioStreamer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioStreamer.m; sourceTree = "<group>"; };
+		56FA66C21CB65CED0004DB32 /* RTSPPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTSPPlayer.h; sourceTree = "<group>"; };
+		56FA66C31CB65CED0004DB32 /* RTSPPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTSPPlayer.m; sourceTree = "<group>"; };
+		710D7CA8F66082B656F6B026 /* Pods-SkyEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SkyEye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye.debug.xcconfig"; sourceTree = "<group>"; };
+		9F8C5BE0FDB581005B079354 /* libPods-SkyEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SkyEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		561E84231C4C848A00B62BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				568CF8C91CAB7DB700A58490 /* libc++.tbd in Frameworks */,
+				56E40E181C996CBD00DDB8A6 /* libavcodec.a in Frameworks */,
+				56E40E191C996CBD00DDB8A6 /* libavdevice.a in Frameworks */,
+				56E40E1A1C996CBD00DDB8A6 /* libavfilter.a in Frameworks */,
+				56E40E1B1C996CBD00DDB8A6 /* libavformat.a in Frameworks */,
+				56E40E1C1C996CBD00DDB8A6 /* libavutil.a in Frameworks */,
+				56E40E1D1C996CBD00DDB8A6 /* libswresample.a in Frameworks */,
+				56E40E1E1C996CBD00DDB8A6 /* libswscale.a in Frameworks */,
+				56E40E171C996CAA00DDB8A6 /* liblzma.tbd in Frameworks */,
+				562A994A1C5F25F000852B9A /* libiconv.tbd in Frameworks */,
+				562A99481C5F25E800852B9A /* libstdc++.tbd in Frameworks */,
+				562A99461C5F25DF00852B9A /* libz.tbd in Frameworks */,
+				562A99441C5F25D500852B9A /* libbz2.tbd in Frameworks */,
+				562A99421C5F25C900852B9A /* UIKit.framework in Frameworks */,
+				562A99401C5F25C200852B9A /* QuartzCore.framework in Frameworks */,
+				562A993E1C5F25B900852B9A /* OpenGLES.framework in Frameworks */,
+				562A993C1C5F25B000852B9A /* MediaPlayer.framework in Frameworks */,
+				562A993A1C5F25A700852B9A /* Foundation.framework in Frameworks */,
+				562A99381C5F259900852B9A /* CoreVideo.framework in Frameworks */,
+				562A99361C5F258900852B9A /* CoreMedia.framework in Frameworks */,
+				562A99341C5F256000852B9A /* CoreGraphics.framework in Frameworks */,
+				562A99321C5F255700852B9A /* AudioToolbox.framework in Frameworks */,
+				562A99301C5F254D00852B9A /* AVFoundation.framework in Frameworks */,
+				08318F4550DAD5E4E36E727B /* libPods-SkyEye.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		561E843C1C4C848A00B62BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		561E84471C4C848A00B62BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		560AC2CD1C7164190021C819 /* Command Generator */ = {
+			isa = PBXGroup;
+			children = (
+				563927E21C92B41500717A2A /* RecieveDataParser.h */,
+				563927E31C92B41500717A2A /* RecieveDataParser.m */,
+				563927E51C92B41500717A2A /* SkyEyeCommandGenerator.h */,
+				563927E61C92B41500717A2A /* SkyEyeCommandGenerator.m */,
+				563927E71C92B41500717A2A /* SkyEyeCommandParser.h */,
+				563927E81C92B41500717A2A /* SkyEyeCommandParser.m */,
+			);
+			name = "Command Generator";
+			sourceTree = "<group>";
+		};
+		560AC2D01C7169C10021C819 /* SkyEye CommandPropertyList */ = {
+			isa = PBXGroup;
+			children = (
+				563927A01C92B2C500717A2A /* ConfigCommandPropertyList.plist */,
+				563927A81C92B2C500717A2A /* SettingsPropertyList.plist */,
+				563927A91C92B2C500717A2A /* SystemCommandPropertyList.plist */,
+				563927AA1C92B2C500717A2A /* VideoCommandPropertyList.plist */,
+			);
+			name = "SkyEye CommandPropertyList";
+			sourceTree = "<group>";
+		};
+		5617529E1C7444CB00B28CCA /* Data Class */ = {
+			isa = PBXGroup;
+			children = (
+				563927D11C92B3CF00717A2A /* CommandPool.h */,
+				563927D21C92B3CF00717A2A /* CommandPool.m */,
+				563927D71C92B3CF00717A2A /* SettingPool.h */,
+				563927D81C92B3CF00717A2A /* SettingPool.m */,
+			);
+			name = "Data Class";
+			sourceTree = "<group>";
+		};
+		561E841D1C4C848A00B62BCF = {
+			isa = PBXGroup;
+			children = (
+				56955CEA1CC222530028E78C /* Default-568h.png */,
+				56955CEB1CC222530028E78C /* Default-568h@2x.png */,
+				561E84281C4C848A00B62BCF /* SkyEye */,
+				561E84421C4C848A00B62BCF /* SkyEyeTests */,
+				561E844D1C4C848A00B62BCF /* SkyEyeUITests */,
+				561E84271C4C848A00B62BCF /* Products */,
+				E2832C1EF2317BCD4B17F651 /* Frameworks */,
+				94786E5F95BB11D8088BCAFD /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		561E84271C4C848A00B62BCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				561E84261C4C848A00B62BCF /* SkyEye.app */,
+				561E843F1C4C848A00B62BCF /* SkyEyeTests.xctest */,
+				561E844A1C4C848A00B62BCF /* SkyEyeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		561E84281C4C848A00B62BCF /* SkyEye */ = {
+			isa = PBXGroup;
+			children = (
+				56FA66BF1CB65CED0004DB32 /* FFMpegDecoder */,
+				560AC2D01C7169C10021C819 /* SkyEye CommandPropertyList */,
+				56A9EFA11C585BB800D08F74 /* SkyEye Prototype And Delegate */,
+				56A9EFA01C585B8A00D08F74 /* SkyEye ViewController Group */,
+				561E842C1C4C848A00B62BCF /* AppDelegate.h */,
+				561E842D1C4C848A00B62BCF /* AppDelegate.m */,
+				561E84321C4C848A00B62BCF /* Main.storyboard */,
+				5639280B1C92B5DC00717A2A /* SkyEye-Bridging-Header.h */,
+				561E84351C4C848A00B62BCF /* Assets.xcassets */,
+				561E84291C4C848A00B62BCF /* Supporting Files */,
+				561E84371C4C848A00B62BCF /* LaunchScreen.storyboard */,
+				561E843A1C4C848A00B62BCF /* Info.plist */,
+			);
+			path = SkyEye;
+			sourceTree = "<group>";
+		};
+		561E84291C4C848A00B62BCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				561E842A1C4C848A00B62BCF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		561E84421C4C848A00B62BCF /* SkyEyeTests */ = {
+			isa = PBXGroup;
+			children = (
+				561E84431C4C848A00B62BCF /* SkyEyeTests.m */,
+				561E84451C4C848A00B62BCF /* Info.plist */,
+			);
+			path = SkyEyeTests;
+			sourceTree = "<group>";
+		};
+		561E844D1C4C848A00B62BCF /* SkyEyeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				561E844E1C4C848A00B62BCF /* SkyEyeUITests.m */,
+				561E84501C4C848A00B62BCF /* Info.plist */,
+			);
+			path = SkyEyeUITests;
+			sourceTree = "<group>";
+		};
+		569C53F61C801D990072D81B /* SettingControllers */ = {
+			isa = PBXGroup;
+			children = (
+				569FAB171CEC44F100D1E547 /* SettingViewController.h */,
+				569FAB181CEC44F100D1E547 /* SettingViewController.m */,
+				563927EF1C92B46D00717A2A /* MultipleSettingTableViewController.h */,
+				563927F01C92B46D00717A2A /* MultipleSettingTableViewController.m */,
+			);
+			name = SettingControllers;
+			sourceTree = "<group>";
+		};
+		56A9EFA01C585B8A00D08F74 /* SkyEye ViewController Group */ = {
+			isa = PBXGroup;
+			children = (
+				569C53F61C801D990072D81B /* SettingControllers */,
+				563928051C92B48600717A2A /* LiveViewController.h */,
+				563928061C92B48600717A2A /* LiveViewController.m */,
+			);
+			name = "SkyEye ViewController Group";
+			sourceTree = "<group>";
+		};
+		56A9EFA11C585BB800D08F74 /* SkyEye Prototype And Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				563927B71C92B33900717A2A /* PlayerManager.h */,
+				563927B81C92B33900717A2A /* PlayerManager.m */,
+				563927B91C92B33900717A2A /* SocketManager.h */,
+				563927BA1C92B33900717A2A /* SocketManager.m */,
+				5617529E1C7444CB00B28CCA /* Data Class */,
+				560AC2CD1C7164190021C819 /* Command Generator */,
+			);
+			name = "SkyEye Prototype And Delegate";
+			sourceTree = "<group>";
+		};
+		56FA66BF1CB65CED0004DB32 /* FFMpegDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				56FA66C01CB65CED0004DB32 /* AudioStreamer.h */,
+				56FA66C11CB65CED0004DB32 /* AudioStreamer.m */,
+				56FA66C21CB65CED0004DB32 /* RTSPPlayer.h */,
+				56FA66C31CB65CED0004DB32 /* RTSPPlayer.m */,
+			);
+			path = FFMpegDecoder;
+			sourceTree = "<group>";
+		};
+		94786E5F95BB11D8088BCAFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				710D7CA8F66082B656F6B026 /* Pods-SkyEye.debug.xcconfig */,
+				04DA03A52CE2D3A3A9D51F01 /* Pods-SkyEye.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E2832C1EF2317BCD4B17F651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				568CF8C81CAB7DB700A58490 /* libc++.tbd */,
+				560112B31CA3EBB000ABB3CE /* VideoToolbox.framework */,
+				56E40E161C996CAA00DDB8A6 /* liblzma.tbd */,
+				56E40E0F1C996C4700DDB8A6 /* libavcodec.a */,
+				56E40E101C996C4700DDB8A6 /* libavdevice.a */,
+				56E40E111C996C4700DDB8A6 /* libavfilter.a */,
+				56E40E121C996C4700DDB8A6 /* libavformat.a */,
+				56E40E131C996C4700DDB8A6 /* libavutil.a */,
+				56E40E141C996C4700DDB8A6 /* libswresample.a */,
+				56E40E151C996C4700DDB8A6 /* libswscale.a */,
+				562A99491C5F25F000852B9A /* libiconv.tbd */,
+				562A99471C5F25E700852B9A /* libstdc++.tbd */,
+				562A99451C5F25DF00852B9A /* libz.tbd */,
+				562A99431C5F25D500852B9A /* libbz2.tbd */,
+				562A99411C5F25C900852B9A /* UIKit.framework */,
+				562A993F1C5F25C200852B9A /* QuartzCore.framework */,
+				562A993D1C5F25B900852B9A /* OpenGLES.framework */,
+				562A993B1C5F25B000852B9A /* MediaPlayer.framework */,
+				562A99391C5F25A700852B9A /* Foundation.framework */,
+				562A99371C5F259900852B9A /* CoreVideo.framework */,
+				562A99351C5F258900852B9A /* CoreMedia.framework */,
+				562A99331C5F256000852B9A /* CoreGraphics.framework */,
+				562A99311C5F255700852B9A /* AudioToolbox.framework */,
+				562A992F1C5F254D00852B9A /* AVFoundation.framework */,
+				9F8C5BE0FDB581005B079354 /* libPods-SkyEye.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		561E84251C4C848A00B62BCF /* SkyEye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 561E84531C4C848A00B62BCF /* Build configuration list for PBXNativeTarget "SkyEye" */;
+			buildPhases = (
+				91CF84C90B043EA219FACBE0 /* 📦 Check Pods Manifest.lock */,
+				561E84221C4C848A00B62BCF /* Sources */,
+				561E84231C4C848A00B62BCF /* Frameworks */,
+				561E84241C4C848A00B62BCF /* Resources */,
+				58C13EA5D6267D16B18C6273 /* 📦 Embed Pods Frameworks */,
+				32425B3DAEDF05152471E396 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkyEye;
+			productName = SkyEye;
+			productReference = 561E84261C4C848A00B62BCF /* SkyEye.app */;
+			productType = "com.apple.product-type.application";
+		};
+		561E843E1C4C848A00B62BCF /* SkyEyeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 561E84561C4C848A00B62BCF /* Build configuration list for PBXNativeTarget "SkyEyeTests" */;
+			buildPhases = (
+				561E843B1C4C848A00B62BCF /* Sources */,
+				561E843C1C4C848A00B62BCF /* Frameworks */,
+				561E843D1C4C848A00B62BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				561E84411C4C848A00B62BCF /* PBXTargetDependency */,
+			);
+			name = SkyEyeTests;
+			productName = SkyEyeTests;
+			productReference = 561E843F1C4C848A00B62BCF /* SkyEyeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		561E84491C4C848A00B62BCF /* SkyEyeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 561E84591C4C848A00B62BCF /* Build configuration list for PBXNativeTarget "SkyEyeUITests" */;
+			buildPhases = (
+				561E84461C4C848A00B62BCF /* Sources */,
+				561E84471C4C848A00B62BCF /* Frameworks */,
+				561E84481C4C848A00B62BCF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				561E844C1C4C848A00B62BCF /* PBXTargetDependency */,
+			);
+			name = SkyEyeUITests;
+			productName = SkyEyeUITests;
+			productReference = 561E844A1C4C848A00B62BCF /* SkyEyeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		561E841E1C4C848A00B62BCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				KnownAssetTags = (
+					LiveTapGesture,
+				);
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Nuvoton;
+				TargetAttributes = {
+					561E84251C4C848A00B62BCF = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = XZ7PL3RVBP;
+					};
+					561E843E1C4C848A00B62BCF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 561E84251C4C848A00B62BCF;
+					};
+					561E84491C4C848A00B62BCF = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 561E84251C4C848A00B62BCF;
+					};
+				};
+			};
+			buildConfigurationList = 561E84211C4C848A00B62BCF /* Build configuration list for PBXProject "NuWicam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 561E841D1C4C848A00B62BCF;
+			productRefGroup = 561E84271C4C848A00B62BCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				561E84251C4C848A00B62BCF /* SkyEye */,
+				561E843E1C4C848A00B62BCF /* SkyEyeTests */,
+				561E84491C4C848A00B62BCF /* SkyEyeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		561E84241C4C848A00B62BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				563927B61C92B2C500717A2A /* VideoCommandPropertyList.plist in Resources */,
+				56955CEC1CC222530028E78C /* Default-568h.png in Resources */,
+				563927B41C92B2C500717A2A /* SettingsPropertyList.plist in Resources */,
+				561E84391C4C848A00B62BCF /* LaunchScreen.storyboard in Resources */,
+				563927B51C92B2C500717A2A /* SystemCommandPropertyList.plist in Resources */,
+				563927AC1C92B2C500717A2A /* ConfigCommandPropertyList.plist in Resources */,
+				56955CED1CC222530028E78C /* Default-568h@2x.png in Resources */,
+				561E84361C4C848A00B62BCF /* Assets.xcassets in Resources */,
+				561E84341C4C848A00B62BCF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		561E843D1C4C848A00B62BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		561E84481C4C848A00B62BCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32425B3DAEDF05152471E396 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		58C13EA5D6267D16B18C6273 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SkyEye/Pods-SkyEye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91CF84C90B043EA219FACBE0 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		561E84221C4C848A00B62BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				560112B51CA3EBDD00ABB3CE /* SocketManager.m in Sources */,
+				56FA66C71CB65CED0004DB32 /* RTSPPlayer.m in Sources */,
+				561E842E1C4C848A00B62BCF /* AppDelegate.m in Sources */,
+				569FAB191CEC44F100D1E547 /* SettingViewController.m in Sources */,
+				563927DF1C92B3CF00717A2A /* SettingPool.m in Sources */,
+				56FA66C61CB65CED0004DB32 /* AudioStreamer.m in Sources */,
+				563927EB1C92B41500717A2A /* SkyEyeCommandGenerator.m in Sources */,
+				563927EC1C92B41500717A2A /* SkyEyeCommandParser.m in Sources */,
+				561E842B1C4C848A00B62BCF /* main.m in Sources */,
+				563927EA1C92B41500717A2A /* RecieveDataParser.m in Sources */,
+				563927F81C92B46D00717A2A /* MultipleSettingTableViewController.m in Sources */,
+				563927BB1C92B33900717A2A /* PlayerManager.m in Sources */,
+				563927DC1C92B3CF00717A2A /* CommandPool.m in Sources */,
+				563928091C92B48600717A2A /* LiveViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		561E843B1C4C848A00B62BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				561E84441C4C848A00B62BCF /* SkyEyeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		561E84461C4C848A00B62BCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				561E844F1C4C848A00B62BCF /* SkyEyeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		561E84411C4C848A00B62BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 561E84251C4C848A00B62BCF /* SkyEye */;
+			targetProxy = 561E84401C4C848A00B62BCF /* PBXContainerItemProxy */;
+		};
+		561E844C1C4C848A00B62BCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 561E84251C4C848A00B62BCF /* SkyEye */;
+			targetProxy = 561E844B1C4C848A00B62BCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		561E84321C4C848A00B62BCF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				561E84331C4C848A00B62BCF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		561E84371C4C848A00B62BCF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				561E84381C4C848A00B62BCF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		561E84511C4C848A00B62BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		561E84521C4C848A00B62BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		561E84541C4C848A00B62BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 710D7CA8F66082B656F6B026 /* Pods-SkyEye.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/JHChainableAnimations\"",
+					"\"${PODS_ROOT}/Headers/Public/OAStackView\"",
+					"\"$(SRCROOT)/FFmpeg-iOS\"",
+				);
+				INFOPLIST_FILE = SkyEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/FFmpeg-iOS/lib\"",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CocoaAsyncSocket\"",
+					"-l\"JHChainableAnimations\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuvoton.nuwicam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SkyEye/SkyEye-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				VALID_ARCHS = "armv7 arm64 armv7s";
+			};
+			name = Debug;
+		};
+		561E84551C4C848A00B62BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04DA03A52CE2D3A3A9D51F01 /* Pods-SkyEye.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/CocoaAsyncSocket\"",
+					"\"${PODS_ROOT}/Headers/Public/JHChainableAnimations\"",
+					"\"${PODS_ROOT}/Headers/Public/OAStackView\"",
+					"\"$(SRCROOT)/FFmpeg-iOS\"",
+				);
+				INFOPLIST_FILE = SkyEye/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"\"$(SRCROOT)/FFmpeg-iOS/lib\"",
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"CocoaAsyncSocket\"",
+					"-l\"JHChainableAnimations\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"Security\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nuvoton.nuwicam;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SkyEye/SkyEye-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
+				VALID_ARCHS = "armv7 arm64 armv7s";
+			};
+			name = Release;
+		};
+		561E84571C4C848A00B62BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SkyEyeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEye.app/SkyEye";
+			};
+			name = Debug;
+		};
+		561E84581C4C848A00B62BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SkyEyeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkyEye.app/SkyEye";
+			};
+			name = Release;
+		};
+		561E845A1C4C848A00B62BCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SkyEyeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SkyEye;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		561E845B1C4C848A00B62BCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SkyEyeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Nuvoton.SkyEyeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SkyEye;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		561E84211C4C848A00B62BCF /* Build configuration list for PBXProject "NuWicam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				561E84511C4C848A00B62BCF /* Debug */,
+				561E84521C4C848A00B62BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		561E84531C4C848A00B62BCF /* Build configuration list for PBXNativeTarget "SkyEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				561E84541C4C848A00B62BCF /* Debug */,
+				561E84551C4C848A00B62BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		561E84561C4C848A00B62BCF /* Build configuration list for PBXNativeTarget "SkyEyeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				561E84571C4C848A00B62BCF /* Debug */,
+				561E84581C4C848A00B62BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		561E84591C4C848A00B62BCF /* Build configuration list for PBXNativeTarget "SkyEyeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				561E845A1C4C848A00B62BCF /* Debug */,
+				561E845B1C4C848A00B62BCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 561E841E1C4C848A00B62BCF /* Project object */;
+}
