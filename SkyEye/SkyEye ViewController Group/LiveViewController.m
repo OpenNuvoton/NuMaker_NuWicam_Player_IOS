@@ -386,9 +386,8 @@
 
 - (void)modbusConnectSuccess{
     NSLog(@"Modbus connect success");
-//    isConnectedToModbus = YES;
-//    [modbusControl readRegister:3 count:5];
-//    [modbusControl writeRegister:4 to:1023];
+    isConnectedToModbus = YES;
+    [modbusControl readRegister:3 count:5];
 }
 
 - (void)modbusReadSuccess:(NSArray *)dataArray{
