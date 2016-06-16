@@ -12,6 +12,7 @@
 #import "SocketManager.h"
 #import "MultipleSettingTableViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ModbusControl.h"
 
 #ifdef USE_DFU_RTSP_PLAYER
 #import "RTSPPlayer.h"
@@ -20,7 +21,9 @@
 
 #define TAG_OF_GESTURE 100;
 
-@interface LiveViewController : UIViewController <UITabBarDelegate, SocketManagerDelegate, UIGestureRecognizerDelegate, UIAlertViewDelegate>{
+@interface LiveViewController : UIViewController <UITabBarDelegate, SocketManagerDelegate, UIGestureRecognizerDelegate, UIAlertViewDelegate, ModbusControlDelegate>{
+    int lightValue;
+    BOOL isConnectedToModbus;
     BOOL hideUIFlag;
     BOOL hideSliderFlag;
     BOOL isFullScreen;
@@ -46,12 +49,14 @@
     NSString *localPath;
     float localTime;
     dispatch_queue_t queue;
+    ModbusControl *modbusControl;
 }
 
 - (void)setupCameraString:(NSString *)string;
 @property (weak, nonatomic) IBOutlet UILabel *outletOffline;
 
 //outlet variables
+@property (weak, nonatomic) IBOutlet UILabel *outletTemperature;
 @property (strong, nonatomic) RTSPPlayer *video;
 @property (weak, nonatomic) IBOutlet UILabel *outletFPSLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *outletRedDot;
@@ -67,4 +72,5 @@
 - (IBAction)actionOneTap:(id)sender;
 - (IBAction)actionSeekTime:(id)sender;
 - (IBAction)actionBackToMain:(id)sender;
+- (IBAction)actionLightOn:(id)sender;
 @end

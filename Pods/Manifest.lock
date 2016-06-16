@@ -8,17 +8,20 @@ PODS:
   - CocoaAsyncSocket/RunLoop (7.4.3)
   - iOS-QR-Code-Encoder (0.0.1)
   - JHChainableAnimations (1.3.0)
+  - ObjectiveLibModbus (0.0.2)
 
 DEPENDENCIES:
   - CocoaAsyncSocket (~> 7.4.3)
   - iOS-QR-Code-Encoder (~> 0.0.1)
   - JHChainableAnimations (~> 1.3.0)
+  - ObjectiveLibModbus (~> 0.0)
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: a18c75dca4b08723628a0bacca6e94803d90be91
   iOS-QR-Code-Encoder: 5aef73d5d6ecdb2031ced14e0e6eadfb8c637514
   JHChainableAnimations: 22085fcb04ca87349e584573558e637f659fd769
+  ObjectiveLibModbus: 3c41055ff8953757130966974d9405d199790f79
 
-PODFILE CHECKSUM: 7310d9169069ae47777f99044a97e06b53a75cc3
+PODFILE CHECKSUM: a2d705c6e46208e7802d66c9f5d256166e64e01d
 
 COCOAPODS: 1.0.0.beta.8

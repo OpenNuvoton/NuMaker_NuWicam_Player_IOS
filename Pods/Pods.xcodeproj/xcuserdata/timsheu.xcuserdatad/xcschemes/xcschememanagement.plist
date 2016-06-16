@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>ObjectiveLibModbus.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-SkyEye.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D14CE8B1670F74F6608A159DB1399AEB</key>
+		<key>97323A6A0807961373525012BC3CFDB8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E79983329CEF2D8B91B376A25F3ED58B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

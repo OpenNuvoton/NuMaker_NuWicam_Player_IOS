@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    isConnectedToModbus = NO;
     hideUIFlag = NO;
     hideSliderFlag = NO;
     isFullScreen = NO;
@@ -33,6 +34,8 @@
     _outletSeekSlider.enabled = NO;
     socketManager = [SocketManager shareInstance];
     socketManager.delegate = self;
+    modbusControl = [ModbusControl sharedInstance];
+    modbusControl.delegate = self;
     activeCamSerial = -1;
     // Do any additional setup after loading the view.
     queue = dispatch_queue_create("com.dispatch.video", DISPATCH_QUEUE_SERIAL);
@@ -114,6 +117,24 @@
         [_outletExpandButton setImage:[UIImage imageNamed:@"expand"] forState:UIControlStateNormal];
         
     }
+}
+
+- (void)actionLightOn:(id)sender{
+    UIButton *button = (UIButton *)sender;
+    NSLog(@"light on value: %d", lightValue);
+    uint8_t lightStatus[6] = {  (lightValue >> 5 ) & 0x1,
+                                (lightValue >> 4 ) & 0x1,
+                                (lightValue >> 3 ) & 0x1,
+                                (lightValue >> 2 ) & 0x1,
+                                (lightValue >> 1 ) & 0x1,
+                                 lightValue & 0x1};
+    lightStatus[button.tag-100] = !lightStatus[button.tag-100];
+    int finalValue=0;
+    for (int i=0; i<6; i++) {
+        finalValue = finalValue | (lightStatus[i] << (5-i));
+    }
+    NSLog(@"final light value: %d", finalValue);
+    [modbusControl writeRegister:4 to:finalValue];
 }
 
 - (IBAction)actionSeekTime:(id)sender {
@@ -262,6 +283,9 @@
     NSString *string = [[NSString alloc] init];
     (redDotFlash == YES) ? (string = @"flashOn", redDotFlash = NO) : (string = @"flashOff", redDotFlash = YES);
     [_outletRedDot setImage:[UIImage imageNamed:string]];
+    if (isConnectedToModbus == YES) {
+        [modbusControl readRegister:3 count:5];
+    }
 }
 
 #pragma delegate
@@ -356,6 +380,37 @@
     
     isPlaying = NO;
     _outletPlayButton.enabled = YES;
+}
+
+#pragma modbus control delegate
+
+- (void)modbusConnectSuccess{
+    NSLog(@"Modbus connect success");
+//    isConnectedToModbus = YES;
+//    [modbusControl readRegister:3 count:5];
+//    [modbusControl writeRegister:4 to:1023];
+}
+
+- (void)modbusReadSuccess:(NSArray *)dataArray{
+    NSNumber *temp = [dataArray objectAtIndex:4];
+    NSNumber *light = [dataArray objectAtIndex:1];
+    _outletTemperature.text = [NSString stringWithFormat:@"%@ \u2103", temp];
+    
+    lightValue = light.intValue;
+    UIButton *button;
+    for (int i=0; i<6; i++) {
+        button = (UIButton *)[self.view viewWithTag:i+100];
+        uint8_t temp = (lightValue >> (5-i));
+        if ((temp & 0x1) == 1) {
+            [button.imageView setImage:[UIImage imageNamed:@"lightOff"]];
+        }else{
+            [button.imageView setImage:[UIImage imageNamed:@"lightOn"]];
+        }
+    }
+}
+
+- (void)modbusWriteSuccess{
+    
 }
 
 @end

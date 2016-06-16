@@ -42,6 +42,7 @@
 		563927EC1C92B41500717A2A /* SkyEyeCommandParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927E81C92B41500717A2A /* SkyEyeCommandParser.m */; };
 		563927F81C92B46D00717A2A /* MultipleSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563927F01C92B46D00717A2A /* MultipleSettingTableViewController.m */; };
 		563928091C92B48600717A2A /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 563928061C92B48600717A2A /* LiveViewController.m */; };
+		564B2BE01D123A4B005B7C20 /* ModbusControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 564B2BDF1D123A4B005B7C20 /* ModbusControl.m */; };
 		568CF8C91CAB7DB700A58490 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 568CF8C81CAB7DB700A58490 /* libc++.tbd */; };
 		56955CEC1CC222530028E78C /* Default-568h.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEA1CC222530028E78C /* Default-568h.png */; };
 		56955CED1CC222530028E78C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 56955CEB1CC222530028E78C /* Default-568h@2x.png */; };
@@ -129,6 +130,8 @@
 		563928051C92B48600717A2A /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveViewController.h; path = "SkyEye ViewController Group/LiveViewController.h"; sourceTree = "<group>"; };
 		563928061C92B48600717A2A /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveViewController.m; path = "SkyEye ViewController Group/LiveViewController.m"; sourceTree = "<group>"; };
 		5639280B1C92B5DC00717A2A /* SkyEye-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SkyEye-Bridging-Header.h"; sourceTree = "<group>"; };
+		564B2BDE1D123A4B005B7C20 /* ModbusControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ModbusControl.h; path = "SkyEye ViewController Group/ModbusControl.h"; sourceTree = "<group>"; };
+		564B2BDF1D123A4B005B7C20 /* ModbusControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ModbusControl.m; path = "SkyEye ViewController Group/ModbusControl.m"; sourceTree = "<group>"; };
 		568CF8C81CAB7DB700A58490 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		56955CEA1CC222530028E78C /* Default-568h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h.png"; sourceTree = "<group>"; };
 		56955CEB1CC222530028E78C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -320,6 +323,8 @@
 				569C53F61C801D990072D81B /* SettingControllers */,
 				563928051C92B48600717A2A /* LiveViewController.h */,
 				563928061C92B48600717A2A /* LiveViewController.m */,
+				564B2BDE1D123A4B005B7C20 /* ModbusControl.h */,
+				564B2BDF1D123A4B005B7C20 /* ModbusControl.m */,
 			);
 			name = "SkyEye ViewController Group";
 			sourceTree = "<group>";
@@ -586,6 +591,7 @@
 				569FAB191CEC44F100D1E547 /* SettingViewController.m in Sources */,
 				563927DF1C92B3CF00717A2A /* SettingPool.m in Sources */,
 				56FA66C61CB65CED0004DB32 /* AudioStreamer.m in Sources */,
+				564B2BE01D123A4B005B7C20 /* ModbusControl.m in Sources */,
 				563927EB1C92B41500717A2A /* SkyEyeCommandGenerator.m in Sources */,
 				563927EC1C92B41500717A2A /* SkyEyeCommandParser.m in Sources */,
 				561E842B1C4C848A00B62BCF /* main.m in Sources */,

@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Public/JHChainableAnimations" "${PODS_ROOT}/Headers/Public/iOS-QR-Code-Encoder"
-LIBRARY_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/CocoaAsyncSocket" "$CONFIGURATION_BUILD_DIR/JHChainableAnimations" "$CONFIGURATION_BUILD_DIR/iOS-QR-Code-Encoder"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" -isystem "${PODS_ROOT}/Headers/Public/JHChainableAnimations" -isystem "${PODS_ROOT}/Headers/Public/iOS-QR-Code-Encoder"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"CocoaAsyncSocket" -l"JHChainableAnimations" -l"iOS-QR-Code-Encoder" -framework "CFNetwork" -framework "Security"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Public/JHChainableAnimations" "${PODS_ROOT}/Headers/Public/ObjectiveLibModbus" "${PODS_ROOT}/Headers/Public/iOS-QR-Code-Encoder"
+LIBRARY_SEARCH_PATHS = $(inherited) "$CONFIGURATION_BUILD_DIR/CocoaAsyncSocket" "$CONFIGURATION_BUILD_DIR/JHChainableAnimations" "$CONFIGURATION_BUILD_DIR/ObjectiveLibModbus" "$CONFIGURATION_BUILD_DIR/iOS-QR-Code-Encoder"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" -isystem "${PODS_ROOT}/Headers/Public/JHChainableAnimations" -isystem "${PODS_ROOT}/Headers/Public/ObjectiveLibModbus" -isystem "${PODS_ROOT}/Headers/Public/iOS-QR-Code-Encoder"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"CocoaAsyncSocket" -l"JHChainableAnimations" -l"ObjectiveLibModbus" -l"iOS-QR-Code-Encoder" -framework "CFNetwork" -framework "Security"
 PODS_ROOT = ${SRCROOT}/Pods
