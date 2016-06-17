@@ -133,7 +133,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR2-nk-EiP">
-                                        <rect key="frame" x="67" y="12" width="20" height="20"/>
+                                        <rect key="frame" x="60" y="12" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="ElJ-72-aXg"/>
                                             <constraint firstAttribute="height" constant="20" id="N3c-pk-ASx"/>
@@ -144,7 +144,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0b-e9-G0w">
-                                        <rect key="frame" x="97" y="11.5" width="20" height="20"/>
+                                        <rect key="frame" x="90" y="11.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="fxl-IR-VoC"/>
                                             <constraint firstAttribute="width" constant="20" id="rM9-MG-PmV"/>
@@ -161,7 +161,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLH-TV-dEH">
-                                        <rect key="frame" x="127" y="11.5" width="20" height="20"/>
+                                        <rect key="frame" x="120" y="11.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="c85-LG-viw"/>
                                             <constraint firstAttribute="height" constant="20" id="yO8-69-4GT"/>
@@ -178,7 +178,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyF-E3-qIj">
-                                        <rect key="frame" x="157" y="11.5" width="20" height="20"/>
+                                        <rect key="frame" x="150" y="11.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="224-k1-1Qi"/>
                                             <constraint firstAttribute="height" constant="20" id="xHN-WZ-cjE"/>
@@ -195,7 +195,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH9-Sj-juy">
-                                        <rect key="frame" x="187" y="11.5" width="20" height="20"/>
+                                        <rect key="frame" x="180" y="11.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="APU-hS-q4i"/>
                                             <constraint firstAttribute="height" constant="20" id="ZMR-fC-CE2"/>
@@ -212,7 +212,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-r1-aVi">
-                                        <rect key="frame" x="217" y="11.5" width="20" height="20"/>
+                                        <rect key="frame" x="210" y="11.5" width="20" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="0co-eC-GLI"/>
                                             <constraint firstAttribute="width" constant="20" id="72a-9L-lXx"/>
@@ -268,7 +268,7 @@
                                     <constraint firstItem="jH9-Sj-juy" firstAttribute="width" secondItem="uyF-E3-qIj" secondAttribute="width" id="dmF-qX-Jpk"/>
                                     <constraint firstItem="oLH-TV-dEH" firstAttribute="leading" secondItem="x0b-e9-G0w" secondAttribute="trailing" constant="10" id="fLa-QC-JOx"/>
                                     <constraint firstItem="URD-WW-Yb0" firstAttribute="width" secondItem="c4F-k6-Rxa" secondAttribute="width" id="hZ1-SY-W7A"/>
-                                    <constraint firstItem="SR2-nk-EiP" firstAttribute="leading" secondItem="4Nm-q4-Dwr" secondAttribute="trailing" constant="15" id="kF1-RN-snV"/>
+                                    <constraint firstItem="SR2-nk-EiP" firstAttribute="leading" secondItem="4Nm-q4-Dwr" secondAttribute="trailing" constant="8" id="kF1-RN-snV"/>
                                     <constraint firstItem="jH9-Sj-juy" firstAttribute="centerY" secondItem="uyF-E3-qIj" secondAttribute="centerY" id="kUv-4Y-WXW"/>
                                     <constraint firstItem="URD-WW-Yb0" firstAttribute="centerX" secondItem="c4F-k6-Rxa" secondAttribute="centerX" id="lfy-1i-KYk"/>
                                     <constraint firstItem="uyF-E3-qIj" firstAttribute="width" secondItem="oLH-TV-dEH" secondAttribute="width" id="oat-rB-ons"/>
