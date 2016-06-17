@@ -26,4 +26,5 @@
 - (void) writeRegister:(int)address to:(int)value;
 - (void) readRegister:(int)startAddress count:(int)count;
 - (void) readBit:(int)startAddress count:(int)count;
+- (void) disconnect;
 @end

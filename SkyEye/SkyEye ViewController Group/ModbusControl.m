@@ -56,4 +56,10 @@
     }];
 }
 
+- (void)disconnect{
+    if (modbus != nil) {
+        [modbus disconnect];
+    }
+}
+
 @end
