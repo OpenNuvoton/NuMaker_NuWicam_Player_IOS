@@ -14,6 +14,7 @@
 - (void) modbusConnectSuccess;
 - (void) modbusWriteSuccess;
 - (void) modbusReadSuccess:(NSArray *)dataArray;
+- (void) modbusConnectFail;
 @end
 
 @interface ModbusControl : NSObject <ModbusControlDelegate>{
@@ -27,4 +28,5 @@
 - (void) readRegister:(int)startAddress count:(int)count;
 - (void) readBit:(int)startAddress count:(int)count;
 - (void) disconnect;
+- (void) connect;
 @end

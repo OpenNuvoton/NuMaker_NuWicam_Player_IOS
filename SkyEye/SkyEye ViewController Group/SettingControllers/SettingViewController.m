@@ -69,6 +69,10 @@
         string = [_settingItemWirelessArray objectAtIndex:indexPath.row];
         detailString = [NSString stringWithString:[self determineDetailString:string]];
         image.image = [UIImage imageNamed:@"wifi"];
+    }else if (indexPath.section == INFO_SECTION){
+        string = [_settingItemInfoArray objectAtIndex:indexPath.row];
+        detailString = @"";
+        image.image = [UIImage imageNamed:@"info"];
     } else{
         string = @"";
         detailString = @"";
@@ -101,13 +105,16 @@
 
 - (void)initSettingArray{
     if (_settingItemVideoArray == nil) {
-        _settingItemVideoArray = [[NSArray alloc] initWithObjects:@"Setup Camera", nil];
+        _settingItemVideoArray = @[@"Setup Camera"];
     }
     if (_settingItemWirelessArray == nil){
-        _settingItemWirelessArray = [[NSArray alloc] initWithObjects:@"Wi-Fi AP Setup", nil];
+        _settingItemWirelessArray = @[@"Wi-Fi AP Setup"];
+    }
+    if (_settingItemInfoArray == nil){
+        _settingItemInfoArray = @[@"APP Version"];
     }
     if ( _settingCatagoryArray == nil) {
-        _settingCatagoryArray = [[NSArray alloc]initWithObjects:_settingItemVideoArray, _settingItemWirelessArray, nil];
+        _settingCatagoryArray = [[NSArray alloc]initWithObjects:_settingItemVideoArray, _settingItemWirelessArray, _settingItemInfoArray, nil];
     }
 }
 
@@ -129,6 +136,16 @@
         switch (indexPath.row) {
             case 0: //Wi-Fi AP Setup
                 title = @"Wi-Fi AP Setup";
+                passedArray = [[NSMutableArray alloc]initWithObjects:title, nil];
+                [self performSegueWithIdentifier:@"TableSettingDetailSegue" sender:self];
+                break;
+            default:
+                break;
+        }
+    }else if(indexPath.section == 2){
+        switch (indexPath.row) {
+            case 0: //Show APP version
+                title = @"APP Version";
                 passedArray = [[NSMutableArray alloc]initWithObjects:title, nil];
                 [self performSegueWithIdentifier:@"TableSettingDetailSegue" sender:self];
                 break;

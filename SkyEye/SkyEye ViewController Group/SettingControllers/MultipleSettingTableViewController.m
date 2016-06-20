@@ -24,6 +24,8 @@
         rowOfTable = 5;
     } else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         rowOfTable = 4;
+    } else if ([receivedString isEqualToString:@"APP Version"]){
+        rowOfTable = 1;
     }
     _labelTitle.text = receivedString;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -34,7 +36,7 @@
 -(void)viewDidDisappear:(BOOL)animated{
     if ([receivedString isEqualToString:@"Setup Camera"]) {
         [self updateHistoryRecord];
-    }else{
+    }else if([receivedString isEqualToString:@"Wi-Fi Setup"]){
         [self updateWiFiSettings];
     }
     BOOL update = [[PlayerManager sharedInstance] updateSettingPropertyList];
@@ -88,6 +90,7 @@
     UISlider *slider = (UISlider *)[cell viewWithTag:13];
     UILabel *labelValue = (UILabel *) [cell viewWithTag:14];
     UIButton *button = (UIButton *)[cell viewWithTag:16];
+    UILabel *labelVerison = (UILabel *)[cell viewWithTag:17];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellIdentifier"];
     }
@@ -194,6 +197,13 @@
             [restartWiFiButton setTitle:@"Restart Wi-Fi to take effect." forState:UIControlStateNormal];
         }
         [dic setObject:wifiDic forKey:@"Wi-Fi AP Setup"];
+    }else if ( [receivedString isEqualToString:@"APP Version"]){
+        if (indexPath.row == 0) {
+            [label setHidden:NO];
+            [labelVerison setHidden:NO];
+            label.text = @"Version";
+            labelVerison.text = @"1.0.6";
+        }
     }
     return cell;
 }

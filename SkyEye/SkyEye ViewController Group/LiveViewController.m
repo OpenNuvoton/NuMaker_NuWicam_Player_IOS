@@ -34,8 +34,6 @@
     _outletSeekSlider.enabled = NO;
     socketManager = [SocketManager shareInstance];
     socketManager.delegate = self;
-    modbusControl = [ModbusControl sharedInstance];
-    modbusControl.delegate = self;
     activeCamSerial = -1;
     // Do any additional setup after loading the view.
     queue = dispatch_queue_create("com.dispatch.video", DISPATCH_QUEUE_SERIAL);
@@ -133,7 +131,8 @@
     for (int i=0; i<6; i++) {
         finalValue = finalValue | (lightStatus[i] << (5-i));
     }
-    NSLog(@"final light value: %d", finalValue);
+    lightValue = finalValue;
+    NSLog(@"final light value: %d, %d", finalValue, lightValue);
     [modbusControl writeRegister:4 to:finalValue];
 }
 
@@ -339,6 +338,8 @@
 }
 
 - (void)updateCameraSettings{
+    modbusControl = [ModbusControl sharedInstance];
+    modbusControl.delegate = self;
     _outletOffline.text = @"ONLINE";
     [checkTimer invalidate];
     checkTimer = nil;
@@ -422,6 +423,10 @@
 
 - (void)modbusWriteSuccess{
     
+}
+
+- (void)modbusConnectFail{
+    isConnectedToModbus = NO;
 }
 
 @end

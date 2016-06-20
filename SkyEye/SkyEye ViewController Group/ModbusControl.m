@@ -26,6 +26,7 @@
             [_delegate modbusConnectSuccess];
         } failure:^(NSError *error){
             NSLog(@"Modbus connect Error: %@", error.localizedDescription);
+            [_delegate modbusConnectFail];
         }];
     }
     return self;
@@ -59,6 +60,17 @@
 - (void)disconnect{
     if (modbus != nil) {
         [modbus disconnect];
+    }
+}
+- (void)connect{
+    if (modbus != nil) {
+        modbus = [[ObjectiveLibModbus alloc] initWithTCP:@"192.168.100.1" port:502 device:1];
+        [modbus connect:^{
+            [_delegate modbusConnectSuccess];
+        } failure:^(NSError *error){
+            NSLog(@"Modbus connect Error: %@", error.localizedDescription);
+//            [_delegate modbusConnectFail];
+        }];
     }
 }
 
