@@ -140,8 +140,8 @@
                 controlResolution = control;
                 [controlResolution setTitle:@"QVGA" forSegmentAtIndex:0];
                 [controlResolution setTitle:@"VGA" forSegmentAtIndex:1];
+                [controlResolution setTitle:@"360p" forSegmentAtIndex:2];
                 [controlResolution removeSegmentAtIndex:3 animated:NO];
-                [controlResolution removeSegmentAtIndex:2 animated:NO];
                 [controlResolution setSelectedSegmentIndex:cameraResolution.intValue];
                 break;
             case 3: //fps
@@ -420,6 +420,9 @@
         } else if (resolutionSelect.intValue == 1) {
             [parameters addObject:[NSString stringWithFormat:@"&VINWIDTH=640&JPEGENCWIDTH=640"]];
             [parameters addObject:[NSString stringWithFormat:@"&VINHEIGHT=480&JPEGENCHEIGHT=480"]];
+        } else if (resolutionSelect.intValue == 2) {
+            [parameters addObject:[NSString stringWithFormat:@"&VINWIDTH=640&JPEGENCWIDTH=640"]];
+            [parameters addObject:[NSString stringWithFormat:@"&VINHEIGHT=360&JPEGENCHEIGHT=360"]];
         }
         generatedCommand = [NSString stringWithString:[SkyEyeCommandGenerator generateInfoCommandWithName:stream parameters:parameters]];
         [socketManager sendCommand:generatedCommand toCamera:receivedString withTag:SOCKET_READ_TAG_OTHER];
