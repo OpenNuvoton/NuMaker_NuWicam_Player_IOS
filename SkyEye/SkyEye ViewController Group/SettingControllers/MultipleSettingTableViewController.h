@@ -12,6 +12,14 @@
 #import "SocketManager.h"
 #import "SkyEyeCommandGenerator.h"
 #import "SocketManager.h"
+#import <KSCrash.h>
+#import <KSCrash/KSCrashInstallation+Alert.h>
+#import <KSCrash/KSCrashInstallationStandard.h>
+#import <KSCrash/KSCrashInstallationQuincyHockey.h>
+#import <KSCrash/KSCrashInstallationEmail.h>
+#import <KSCrash/KSCrashInstallationVictory.h>
+
+#import <MessageUI/MessageUI.h>
 
 @import SystemConfiguration.CaptiveNetwork;
 @class MultipleSettingTableViewController;
@@ -25,7 +33,8 @@
 green:((float)((rgbValue & 0x00FF00) >>  8))/255.0 \
 blue:((float)((rgbValue & 0x0000FF) >>  0))/255.0 \
 alpha:1.0]
-@interface MultipleSettingTableViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate, SocketManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource>{
+@interface MultipleSettingTableViewController : UITableViewController <UITextFieldDelegate, UIAlertViewDelegate, SocketManagerDelegate, UIPickerViewDelegate, UIPickerViewDataSource, MFMailComposeViewControllerDelegate>{
+    MFMailComposeViewController *mailComposer;
     NSString *receivedString;
     NSArray *receivedArray;
     NSString *receivedCategory;
@@ -33,7 +42,7 @@ alpha:1.0]
     UISlider *sliderBitRate;
     UITextField *textfieldName, *textfieldURL, *textfieldSSID, *textfieldPASS;
     UISegmentedControl *controlResolution;
-    UIButton *rebootButton, *showPasswordButton, *restartWiFiButton;
+    UIButton *rebootButton, *showPasswordButton, *restartWiFiButton, *sendReportButton;
     NSString *sliderSavedValue;
     NSMutableArray *historyArray;
     CGRect historyFrame;

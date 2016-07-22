@@ -25,7 +25,7 @@
     } else if ([receivedString isEqualToString:@"Wi-Fi AP Setup"]){
         rowOfTable = 4;
     } else if ([receivedString isEqualToString:@"APP Version"]){
-        rowOfTable = 1;
+        rowOfTable = 2;
     }
     _labelTitle.text = receivedString;
     [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -40,7 +40,7 @@
         [self updateWiFiSettings];
     }
     BOOL update = [[PlayerManager sharedInstance] updateSettingPropertyList];
-    NSLog(@"update result: %@", ((update == YES) ? @"Success!" : @"Failed...") );
+    DDLogDebug(@"update result: %@", ((update == YES) ? @"Success!" : @"Failed...") );
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
@@ -108,7 +108,7 @@
         NSString *cameraName = [NSString stringWithString:[dic objectForKey:@"Name"]];
         NSString *cameraURL = [NSString stringWithString:[dic objectForKey:@"URL"]];
         NSString *cameraResolution = [NSString stringWithString:[dic objectForKey:@"Resolution"]];
-        NSString *cameraFPS = [NSString stringWithString:[dic objectForKey:@"FPS"]];
+        NSString *cameraFPS = [NSString stringWithString:[dic objectForKey:@"Bit Rate"]];
         UIButton *buttonHistory;
         label.backgroundColor = [UIColor whiteColor];
         cell.backgroundColor = [UIColor whiteColor];
@@ -151,8 +151,6 @@
                 labelBitRateValue = labelValue;
                 label.text = @"BitRate";
                 sliderBitRate = slider;
-                sliderBitRate.minimumValue = 1;
-                sliderBitRate.maximumValue = 8;
                 sliderBitRate.value = (float)cameraFPS.intValue;
                 labelBitRateValue.text = [NSString stringWithFormat:@"%d", (int)sliderBitRate.value*1024];
                 break;
@@ -202,7 +200,11 @@
             [label setHidden:NO];
             [labelVerison setHidden:NO];
             label.text = @"Version";
-            labelVerison.text = @"1.0.6";
+            labelVerison.text = @"1.0.8";
+        }else if (indexPath.row == 1){
+            [button setHidden:NO];
+            sendReportButton = button;
+            [sendReportButton setTitle:@"Send Report" forState:UIControlStateNormal];
         }
     }
     return cell;
@@ -219,6 +221,8 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Restart Required" message:@"Wi-Fi will restart, is it okay?" delegate:self cancelButtonTitle:@"Don't restart now" otherButtonTitles:@"Restart", nil];
         alert.tag = 1;
         [alert show];
+    }else if([button isEqual:sendReportButton]){
+        [self sendMail:nil];
     }else{
         textfieldPASS.secureTextEntry = NO;
     }
@@ -229,13 +233,10 @@
     UISlider *slider = (UISlider *)sender;
     NSMutableDictionary *dic = [[PlayerManager sharedInstance] dictionarySetting];
     NSMutableDictionary *cameraDic = [dic objectForKey:receivedString];
+    slider.value = roundf(slider.value);
     NSString *value = [NSString stringWithFormat:@"%d", (int)slider.value];
     if ([slider isEqual:sliderBitRate]) {
-        if (sliderBitRate.value == 8) {
-            labelBitRateValue.text = [NSString stringWithFormat:@"%d", (int)sliderBitRate.value*1024];
-        }else{
-            labelBitRateValue.text = [NSString stringWithFormat:@"%d", (int)sliderBitRate.value*1024];
-        }
+        labelBitRateValue.text = [NSString stringWithFormat:@"%d", (int)sliderBitRate.value*1024];
         [cameraDic setObject:value forKey:@"FPS"];
     }
 }
@@ -320,12 +321,12 @@
 
 -(NSDictionary *)getSSID{
     NSArray *interfaces = (__bridge_transfer NSArray *) CNCopySupportedInterfaces();
-    NSLog(@"Supported interfaces :%@", interfaces);
+    DDLogDebug(@"Supported interfaces :%@", interfaces);
     
     NSDictionary *info;
     for (NSString *interfaceName in interfaces) {
         info = (__bridge_transfer NSDictionary *)CNCopyCurrentNetworkInfo((__bridge CFStringRef)interfaceName);
-        NSLog(@"%@ => %@", interfaceName, info);
+        DDLogDebug(@"%@ => %@", interfaceName, info);
         if (info && [info count] ) {
             break;
         }
@@ -375,7 +376,7 @@
 -(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     [super touchesBegan:touches withEvent:event];
     [_historyPicker setHidden:YES];
-    NSLog(@"touches began");
+    DDLogDebug(@"touches began");
 }
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
@@ -396,7 +397,7 @@
 -(void)sendValueWithCategory:(NSString *)category{
     NSString *generatedCommand = [NSString stringWithString:[SkyEyeCommandGenerator generateInfoCommandWithName:category]];
     SocketManager *socketManager = [SocketManager shareInstance];
-    NSLog(@"command: %@", generatedCommand);
+    DDLogDebug(@"command: %@", generatedCommand);
     if ([category isEqualToString:@"Device Mic"]) {
         [socketManager sendCommand:generatedCommand toCamera:receivedString withTag:SOCKET_READ_TAG_OTHER];
     }
@@ -448,12 +449,12 @@
     if (option == 0) {
         NSString *generatedCommand = [NSString stringWithString:[SkyEyeCommandGenerator generateInfoCommandWithName:@"Restart Stream"]];
         SocketManager *socketManager = [SocketManager shareInstance];
-        NSLog(@"command: %@", generatedCommand);
+        DDLogDebug(@"command: %@", generatedCommand);
         [socketManager sendCommand:generatedCommand toCamera:@"Setup Camera" withTag:SOCKET_READ_TAG_INFO_REBOOT];
     }else if (option == 1){
         NSString *generatedCommand = [NSString stringWithString:[SkyEyeCommandGenerator generateInfoCommandWithName:@"Restart Wi-Fi"]];
         SocketManager *socketManager = [SocketManager shareInstance];
-        NSLog(@"command: %@", generatedCommand);
+        DDLogDebug(@"command: %@", generatedCommand);
         [socketManager sendCommand:generatedCommand toCamera:@"Setup Camera" withTag:SOCKET_READ_TAG_INFO_REBOOT];
     }
     
@@ -649,5 +650,38 @@
     // Pass the selected object to the new view controller.
 }
 
+- (void)sendMail:(id)sender{
+    if ([MFMailComposeViewController canSendMail]) {
+        mailComposer = [[MFMailComposeViewController alloc]init];
+        mailComposer.mailComposeDelegate = self;
+        [mailComposer setSubject:@"Send Report"];
+        [mailComposer setToRecipients:@[@"CCHSU20@nuvoton.com"]];
+        [mailComposer setMessageBody:@"" isHTML:NO];
+        PlayerManager *manager = [PlayerManager sharedInstance];
+        NSString *file = manager.getCurrentLogFilePath;
+        NSArray *filePart = [file componentsSeparatedByString:@"."];
+        NSString *filename = [filePart objectAtIndex:0];
+        NSData *fileData = [NSData dataWithContentsOfFile:file];
+        
+        NSString *mimeType = @"text/plain";
+        [mailComposer addAttachmentData:fileData mimeType:mimeType fileName:filename];
+        [self presentViewController:mailComposer animated:YES completion:NULL];
+    }else{
+        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"E-mail not Enable" message:@"Configure your E-mail account first!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+    }
+}
+
+-(void)mailComposeController:(MFMailComposeViewController *)controller
+         didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error{
+    if (result) {
+        DDLogDebug(@"Result : %d",result);
+    }
+    if (error) {
+        DDLogDebug(@"Error : %@",error);
+    }
+    [self dismissModalViewControllerAnimated:YES];
+    
+}
 
 @end

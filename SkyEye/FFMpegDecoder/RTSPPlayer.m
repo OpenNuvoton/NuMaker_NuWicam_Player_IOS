@@ -113,13 +113,13 @@
 
     for (int i=0; i<pFormatCtx->nb_streams; i++) {
         if (pFormatCtx->streams[i]->codec->codec_type==AVMEDIA_TYPE_VIDEO) {
-            NSLog(@"found video stream");
+            DDLogDebug(@"found video stream");
             videoStream=i;
         }
         
         if (pFormatCtx->streams[i]->codec->codec_type==AVMEDIA_TYPE_AUDIO) {
             audioStream=i;
-            NSLog(@"found audio stream");
+            DDLogDebug(@"found audio stream");
         }
     }
     
@@ -144,7 +144,7 @@
     }
     
     if (audioStream > -1 ) {
-        NSLog(@"set up audiodecoder");
+        DDLogDebug(@"set up audiodecoder");
         [self setupAudioDecoder];
     }
 	
@@ -230,7 +230,7 @@ initError:
     int frameFinished=0;
 
     while (!frameFinished && av_read_frame(pFormatCtx, &packet) >=0 ) {
-//        NSLog(@"packet index: %d", packet.stream_index);
+//        DDLogDebug(@"packet index: %d", packet.stream_index);
         // Is this a packet from the video stream?
         if(packet.stream_index==videoStream) {
             // Decode video frame
@@ -311,12 +311,12 @@ initError:
         
         AVCodec *codec = avcodec_find_decoder(_audioCodecContext->codec_id);
         if (codec == NULL) {
-            NSLog(@"Not found audio codec.");
+            DDLogDebug(@"Not found audio codec.");
             return;
         }
         
         if (avcodec_open2(_audioCodecContext, codec, NULL) < 0) {
-            NSLog(@"Could not open audio codec.");
+            DDLogDebug(@"Could not open audio codec.");
             return;
         }
         

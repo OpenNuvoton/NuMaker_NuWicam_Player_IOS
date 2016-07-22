@@ -5,6 +5,7 @@
 #import "swscale.h"
 #import <AudioToolbox/AudioQueue.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import "PlayerManager.h"
 
 @interface RTSPPlayer : NSObject {
 	AVFormatContext *pFormatCtx;

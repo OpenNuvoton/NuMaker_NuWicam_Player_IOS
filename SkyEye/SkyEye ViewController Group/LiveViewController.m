@@ -46,6 +46,8 @@
     _outletSeekSlider.value = 0;
     _outletSeekSlider.enabled = NO;
     [self initCamera:cameraString.intValue];
+    [self.tabBarController.tabBar setUserInteractionEnabled:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(enableTabBar) userInfo:nil repeats:NO];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
@@ -119,7 +121,7 @@
 
 - (void)actionLightOn:(id)sender{
     UIButton *button = (UIButton *)sender;
-    NSLog(@"light on value: %d", lightValue);
+    DDLogDebug(@"light on value: %d", lightValue);
     uint8_t lightStatus[6] = {  (lightValue >> 5 ) & 0x1,
                                 (lightValue >> 4 ) & 0x1,
                                 (lightValue >> 3 ) & 0x1,
@@ -132,7 +134,7 @@
         finalValue = finalValue | (lightStatus[i] << (5-i));
     }
     lightValue = finalValue;
-    NSLog(@"final light value: %d, %d", finalValue, lightValue);
+    DDLogDebug(@"final light value: %d, %d", finalValue, lightValue);
     [modbusControl writeRegister:4 to:finalValue];
 }
 
@@ -169,7 +171,7 @@
     hideUIFlag = localHideUIFlag;
     int side = 1;//1 is up, 0 is down
     (localHideUIFlag == YES) ? (side = -1) : (side = 1);
-    self.tabBarController.tabBar.transformY(-1*side*self.tabBarController.tabBar.bounds.size.height).easeIn.delay(0.1).animate(0.3).animationCompletion = JHAnimationCompletion(){
+    self.tabBarController.tabBar.transformY(-1*side*self.tabBarController.tabBar.bounds.size.height).easeIn.delay(0.1).animate(0.2).animationCompletion = JHAnimationCompletion(){
         _outletTapGesture.enabled = YES;
     };
 }
@@ -262,7 +264,7 @@
         [self playVideoViewWithPath:targetURL seekTime:0];
     }
     @catch (NSException *exception) {
-        NSLog(@"set data source failed");
+        DDLogDebug(@"set data source failed");
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Network Not Stable" message:@"Please Check Internet Connection and try again." delegate:self cancelButtonTitle:@"Okay" otherButtonTitles:nil, nil];
         [alertView show];
         return;
@@ -386,7 +388,7 @@
 #pragma modbus control delegate
 
 - (void)modbusConnectSuccess{
-    NSLog(@"Modbus connect success");
+    DDLogDebug(@"Modbus connect success");
     isConnectedToModbus = YES;
     [modbusControl readRegister:3 count:5];
 }
@@ -427,6 +429,21 @@
 
 - (void)modbusConnectFail{
     isConnectedToModbus = NO;
+    modbusControl.count++;
+    if (modbusControl.count < 3) {
+        [modbusControl connect];
+    }else{
+        [_outletTemperature setHidden:YES];
+        UIButton *button;
+        for (int i=0; i<6; i++) {
+            button = (UIButton *)[self.view viewWithTag:i+100];
+            [button setHidden:YES];
+        }
+    }
+}
+
+- (void)enableTabBar{
+    [self.tabBarController.tabBar setUserInteractionEnabled:YES];
 }
 
 @end

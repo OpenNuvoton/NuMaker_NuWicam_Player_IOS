@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "PlayerManager.h"
 @interface SkyEyeCommandParser : NSObject{
     NSMutableDictionary *dictionaryCommandList;
     NSArray *arrayCommandName, *arrayCommandContent;

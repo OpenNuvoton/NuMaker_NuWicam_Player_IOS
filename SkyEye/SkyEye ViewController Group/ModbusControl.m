@@ -7,7 +7,7 @@
 //
 
 #import "ModbusControl.h"
-
+#import "PlayerManager.h"
 @implementation ModbusControl
 
 + (ModbusControl *)sharedInstance{
@@ -22,10 +22,11 @@
 - (ModbusControl *) init{
     if (self == [super init]) {
         modbus = [[ObjectiveLibModbus alloc] initWithTCP:@"192.168.100.1" port:502 device:1];
+        _count = 0;
         [modbus connect:^{
             [_delegate modbusConnectSuccess];
         } failure:^(NSError *error){
-            NSLog(@"Modbus connect Error: %@", error.localizedDescription);
+            DDLogDebug(@"Modbus connect Error: %@", error.localizedDescription);
             [_delegate modbusConnectFail];
         }];
     }
@@ -36,24 +37,24 @@
     [modbus writeRegister:address to:value success:^{
         [_delegate modbusWriteSuccess];
     }failure: ^(NSError *error){
-        NSLog(@"Modbus write Error: %@", error.localizedDescription);
+        DDLogDebug(@"Modbus write Error: %@", error.localizedDescription);
     }];
 }
 
 - (void)readRegister:(int)startAddress count:(int)count{
     [modbus readRegistersFrom:startAddress count:count success:^(NSArray *array){
-//        NSLog(@"modbus: %@", array);
+//        DDLogDebug(@"modbus: %@", array);
         [_delegate modbusReadSuccess:[NSArray arrayWithArray:array]];
     }failure: ^(NSError *error){
-        NSLog(@"Modbus read error: %@", error.localizedDescription);
+        DDLogDebug(@"Modbus read error: %@", error.localizedDescription);
     }];
 }
 
 - (void)readBit:(int)startAddress count:(int)count{
     [modbus readBitsFrom:startAddress count:count success:^(NSArray *array){
-//        NSLog(@"Modbus read bit: %@", array);
+//        DDLogDebug(@"Modbus read bit: %@", array);
     }failure: ^(NSError *error){
-        NSLog(@"Modbus read bit error: %@", error.localizedDescription);
+        DDLogDebug(@"Modbus read bit error: %@", error.localizedDescription);
     }];
 }
 
@@ -68,8 +69,8 @@
         [modbus connect:^{
             [_delegate modbusConnectSuccess];
         } failure:^(NSError *error){
-            NSLog(@"Modbus connect Error: %@", error.localizedDescription);
-//            [_delegate modbusConnectFail];
+            DDLogDebug(@"Modbus connect Error: %@", error.localizedDescription);
+            [_delegate modbusConnectFail];
         }];
     }
 }

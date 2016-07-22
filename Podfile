@@ -5,6 +5,8 @@ target "SkyEye" do
 	pod 'JHChainableAnimations', '~> 1.3.0'
 	pod 'iOS-QR-Code-Encoder', '~> 0.0.1'
 	pod 'ObjectiveLibModbus', '~> 0.0'
+    pod 'KSCrash', '~> 1.6'
+    pod 'CocoaLumberjack'
 end
 
 post_install do |installer_representation|

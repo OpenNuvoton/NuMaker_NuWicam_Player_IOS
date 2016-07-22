@@ -23,7 +23,7 @@
 
 + (ModbusControl *) sharedInstance;
 @property (strong, nonatomic) id <ModbusControlDelegate> delegate;
-
+@property int count;
 - (void) writeRegister:(int)address to:(int)value;
 - (void) readRegister:(int)startAddress count:(int)count;
 - (void) readBit:(int)startAddress count:(int)count;

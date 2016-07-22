@@ -21,12 +21,17 @@
     
     pool = [CommandPool sharedInstance];
     [self initSettingArray];
+    
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [self.tabBarController.tabBar setHidden:YES];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -37,6 +42,9 @@
     if (passedString == nil) {
         passedString = [[NSString alloc]init];
     }
+    [self.tabBarController.tabBar setHidden:NO];
+    [self.tabBarController.tabBar setUserInteractionEnabled:NO];
+    [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(enableTabBar) userInfo:nil repeats:NO];
 }
 
 #pragma TableView Delegate
@@ -180,4 +188,9 @@
 - (void)setupCameraString:(NSString *)string{
     cameraString = [NSString stringWithString:string];
 }
+
+- (void)enableTabBar{
+    [self.tabBarController.tabBar setUserInteractionEnabled:YES];
+}
+
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "SettingPool.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
+#import "Constants.h"
 
 #ifndef USE_DFU_RTSP_PLAYER
 #define USE_DFU_RTSP_PLAYER
@@ -36,6 +38,7 @@ enum{
 @interface PlayerManager : NSObject{
     NSString *path;
     NSString *ssid, *pass;
+    DDFileLogger *fileLogger;
 }
 
 @property (strong, nonatomic) NSMutableDictionary *cameraAddress;
@@ -49,4 +52,5 @@ enum{
 - (void)resetData;
 - (NSString *)getSSID;
 - (NSString *)getPASS;
+- (NSString *)getCurrentLogFilePath;
 @end

@@ -39,7 +39,7 @@
 }
 
 - (void)sendAudioData{
-//    NSLog(@"socket manager, send audio data, %@", commandToBeSentInData);
+//    DDLogDebug(@"socket manager, send audio data, %@", commandToBeSentInData);
     [socket writeData:commandToBeSentInData withTimeout:-1 tag:tagLocal];
 }
 
@@ -57,7 +57,7 @@
     _isConnected = YES;
     _hostURL = [[NSString alloc] initWithString:host];
     _hostPort = [[NSString alloc] initWithFormat:@"%d", port];
-    NSLog(@"Did connected to Host: %@ at port: %@", _hostURL, _hostPort);
+    DDLogDebug(@"Did connected to Host: %@ at port: %@", _hostURL, _hostPort);
     [self sendData];
 }
 
@@ -72,13 +72,13 @@
     }
     _hostURL = hostURL;
     _hostPort = hostPort;
-    NSLog(@"address: %@, port: %@", _hostURL, _hostPort);
+    DDLogDebug(@"address: %@, port: %@", _hostURL, _hostPort);
     ret = [socket connectToHost:_hostURL onPort:_hostPort.intValue withTimeout:3 error:nil];
     return ret;
 }
 
 -(void)socketDidDisconnect:(GCDAsyncSocket *)sock withError:(NSError *)err{
-    NSLog(@"error code: %ld", (long)err.code);
+    DDLogDebug(@"error code: %ld", (long)err.code);
     _isConnected = NO;
     if (err.code >=4 && err.code < 7) {
         [_delegate hostNotResponse:tagLocal command:commandToBeSent];
@@ -88,13 +88,13 @@
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didWriteDataWithTag:(long)tag{
-//    NSLog(@"did write data: %@", commandToBeSent);
+//    DDLogDebug(@"did write data: %@", commandToBeSent);
 }
 
 - (void)socket:(GCDAsyncSocket *)sock didReadData:(NSData *)data withTag:(long)tag{
     NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"===tag: %ld", (long)tag);
-    NSLog(@"%@", string);
+    DDLogDebug(@"===tag: %ld", (long)tag);
+    DDLogDebug(@"%@", string);
     PlayerManager *manager = [PlayerManager sharedInstance];
     if (tag == SOCKET_READ_TAG_CAMERA_1) {
         NSArray *arrayData = [string componentsSeparatedByString:@"\r\n"];
@@ -149,7 +149,7 @@
         if ([dataType isEqualToString:@"JSON DATA"]) {
             NSDictionary *json = [parsedDic objectForKey:@"json"];
             NSString *value = [NSString stringWithString:[json objectForKey:@"value"]];
-            NSLog(@"update stream result: %@", value);
+            DDLogDebug(@"update stream result: %@", value);
         } else if ([dataType isEqualToString:@"no data"]){
             [socket readDataWithTimeout:-1 tag:(int)tag];
             return;
@@ -225,16 +225,20 @@
             NSDictionary *json = [parsedDic objectForKey:@"json"];
             NSString *value = [NSString stringWithString:[json objectForKey:@"BITRATE"]];
             if (value.intValue > 0) {
+                int valueTemp = value.intValue / 1024;
+                value = [NSString stringWithFormat:@"%d", valueTemp];
                 [cameraDic setObject:value forKey:@"Bit Rate"];
                 if (tag == SOCKET_READ_TAG_LIST_STREAM_ALIVE) {
                     [_delegate updateCameraSettings];
                 }
             }
-            value = [NSString stringWithString:[json objectForKey:@"VINWIDTH"]];
-            if (value.intValue == 640) {
-                [cameraDic setObject:@"1" forKey:@"Resolution"];
-            }else{
+            value = [NSString stringWithString:[json objectForKey:@"VINHEIGHT"]];
+            if (value.intValue == 240) {
                 [cameraDic setObject:@"0" forKey:@"Resolution"];
+            }else if (value.intValue == 480){
+                [cameraDic setObject:@"1" forKey:@"Resolution"];
+            }else if (value.intValue == 360){
+                [cameraDic setObject:@"2" forKey:@"Resolution"];
             }
         } else if ([dataType isEqualToString:@"no data"]){
             [socket readDataWithTimeout:-1 tag:(int)tag];
@@ -260,7 +264,7 @@
     }
     localURL = splitURL;
     if (_isConnected == NO || ![socket.connectedHost isEqualToString:_hostURL]){
-        NSLog(@"connect to host; send command set");
+        DDLogDebug(@"connect to host; send command set");
         return [self connectHost:splitURL withPort:@"80" withTag:tag];
     }else{
         [self sendData];

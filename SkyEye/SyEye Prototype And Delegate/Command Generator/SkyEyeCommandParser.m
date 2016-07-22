@@ -36,7 +36,7 @@
         command = (NSString *)[commandArray objectAtIndex:1];
         [parsedCommandString stringByAppendingString:command];
     }
-    NSLog(@"==command string parsed result: %@", parsedCommandString);
+    DDLogDebug(@"==command string parsed result: %@", parsedCommandString);
     return parsedCommandString;
 }
 

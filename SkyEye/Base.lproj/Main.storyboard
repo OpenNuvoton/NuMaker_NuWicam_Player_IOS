@@ -129,17 +129,17 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A ℃" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nm-q4-Dwr">
-                                        <rect key="frame" x="8" y="20" width="55" height="21"/>
+                                        <rect key="frame" x="8" y="20" width="60" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="Hf1-9i-ebf"/>
-                                            <constraint firstAttribute="width" constant="55" id="cbI-r9-eNu"/>
+                                            <constraint firstAttribute="width" constant="60" id="cbI-r9-eNu"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SR2-nk-EiP" userLabel="Red 1 Button">
-                                        <rect key="frame" x="71" y="15" width="32" height="32"/>
+                                        <rect key="frame" x="76" y="15" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="ElJ-72-aXg"/>
                                             <constraint firstAttribute="height" constant="32" id="N3c-pk-ASx"/>
@@ -153,7 +153,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0b-e9-G0w" userLabel="Red 2 Button">
-                                        <rect key="frame" x="113" y="15" width="32" height="32"/>
+                                        <rect key="frame" x="118" y="15" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="fxl-IR-VoC"/>
                                             <constraint firstAttribute="width" constant="20" id="rM9-MG-PmV"/>
@@ -173,7 +173,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLH-TV-dEH" userLabel="Green 1 Button">
-                                        <rect key="frame" x="155" y="14" width="32" height="32"/>
+                                        <rect key="frame" x="160" y="14" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="c85-LG-viw"/>
                                             <constraint firstAttribute="height" constant="20" id="yO8-69-4GT"/>
@@ -193,7 +193,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uyF-E3-qIj" userLabel="Green 2 Button">
-                                        <rect key="frame" x="197" y="14" width="32" height="32"/>
+                                        <rect key="frame" x="202" y="14" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="224-k1-1Qi"/>
                                             <constraint firstAttribute="height" constant="20" id="xHN-WZ-cjE"/>
@@ -223,7 +223,7 @@
                                         </variation>
                                     </imageView>
                                     <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-r1-aVi" userLabel="Blue 2 Button">
-                                        <rect key="frame" x="281" y="14" width="32" height="32"/>
+                                        <rect key="frame" x="286" y="14" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="0co-eC-GLI"/>
                                             <constraint firstAttribute="width" constant="20" id="72a-9L-lXx"/>
@@ -243,7 +243,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jH9-Sj-juy" userLabel="Blue 1 Button">
-                                        <rect key="frame" x="239" y="14" width="32" height="32"/>
+                                        <rect key="frame" x="244" y="14" width="32" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="APU-hS-q4i"/>
                                             <constraint firstAttribute="height" constant="20" id="ZMR-fC-CE2"/>
@@ -484,7 +484,7 @@
                                                 <action selector="segmentsValueChange:" destination="8Xb-PI-ocN" eventType="valueChanged" id="O9l-P4-UTr"/>
                                             </connections>
                                         </segmentedControl>
-                                        <slider opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Dq-bj-Dok">
+                                        <slider opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="4" translatesAutoresizingMaskIntoConstraints="NO" id="5Dq-bj-Dok">
                                             <rect key="frame" x="343" y="7" width="251" height="31"/>
                                             <connections>
                                                 <action selector="sliderTouchUpInside:" destination="8Xb-PI-ocN" eventType="touchUpOutside" id="6sq-c0-QnT"/>
