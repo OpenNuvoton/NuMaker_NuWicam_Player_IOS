@@ -23,6 +23,7 @@
 
 @interface LiveViewController : UIViewController <UITabBarDelegate, SocketManagerDelegate, UIGestureRecognizerDelegate, UIAlertViewDelegate, ModbusControlDelegate>{
     int lightValue;
+    NSString *resolution;
     BOOL isConnectedToModbus;
     BOOL hideUIFlag;
     BOOL hideSliderFlag;

@@ -220,6 +220,7 @@
         default:
             break;
     }
+    [self determineResolution];
 }
 
 
@@ -237,8 +238,11 @@
         [checkTimer invalidate];
         checkTimer = nil;
     }
-    _video.outputWidth = _outletLiveView.bounds.size.width;
-    _video.outputHeight = _outletLiveView.bounds.size.height;
+//    NSLog(@"%f, %f, %d, %d", _outletLiveView.frame.size.width, _outletLiveView.frame.size.height, _video.outputWidth, _video.outputHeight);
+
+//    [self determineResolution];
+//    _video.outputWidth = _outletLiveView.bounds.size.width;
+//    _video.outputHeight = _outletLiveView.bounds.size.height;
     dispatch_async(dispatch_get_main_queue(), ^{
         _outletLiveView.backgroundColor = [UIColor colorWithPatternImage:_video.currentImage];
         [_outletPlayButton setImage:[UIImage imageNamed:@"pause"] forState:UIControlStateNormal];
@@ -248,6 +252,23 @@
         _outletPlayButton.enabled = YES;
         [outletBuffering stopAnimating];
     });
+}
+
+- (void)determineResolution{
+    float ratio = 1.33f;
+    float viewWidth = _outletLiveView.frame.size.width;
+    float viewHeight = _outletLiveView.frame.size.width / ratio;
+//    NSLog(@"%f, %f, %d, %d", _outletLiveView.frame.size.width, _outletLiveView.frame.size.height, _video.outputWidth, _video.outputHeight);
+    if (resolution.intValue > 2) {
+        ratio = 1.67f;
+        viewHeight = _outletLiveView.frame.size.width / ratio;
+    }
+    if (self.view.frame.size.height <= _outletLiveView.frame.size.height) {
+        viewWidth = viewHeight * ratio;
+    }
+    [_outletLiveView setFrame:CGRectMake(_outletLiveView.frame.origin.x, _outletLiveView.frame.origin.y, viewWidth, viewHeight)];
+    _video.outputWidth = (int) _outletLiveView.frame.size.width;
+    _video.outputHeight = (int) _outletLiveView.frame.size.height;
 }
 
 - (void)initCamera:(int)cameraSerial{

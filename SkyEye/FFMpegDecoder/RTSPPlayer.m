@@ -88,12 +88,14 @@
     }
     else{
         ret = av_dict_set(&opts, "rtsp_transport", "udp", 0);
-//        ret = av_dict_set(&opts, "probesize", "5120", 0);
-//        ret = av_dict_set(&opts, "fflags", "nobuffer", 0);
+        
     }
     
 //    ret = av_dict_set(&opts, "analyzeduration", "0", 0);
-//    ret = av_dict_set(&opts, "flush_packets", "1", 0);
+    ret = av_dict_set(&opts, "probesize", "5120", 0);
+    ret = av_dict_set(&opts, "max_delay", "0", 0);
+    ret = av_dict_set(&opts, "fflags", "nobuffer", 0);
+    ret = av_dict_set(&opts, "flush_packets", "1", 0);
 //    ret = av_dict_set(&opts, "sync", "1", 0);
     
     if (avformat_open_input(&pFormatCtx, [moviePath UTF8String], NULL, &opts) !=0 ) {
