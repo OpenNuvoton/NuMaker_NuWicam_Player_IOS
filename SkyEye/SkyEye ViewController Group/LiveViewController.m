@@ -426,19 +426,19 @@
         uint8_t temp = (lightValue >> (5-i));
         if ((temp & 0x1) == 1) {
             if (i == 0 || i == 1) {
-                [button.imageView setImage:[UIImage imageNamed:@"lightBlueOff"]];
-            }else if( i == 2 || i == 3){
-                [button.imageView setImage:[UIImage imageNamed:@"lightOff"]];
-            }else{
                 [button.imageView setImage:[UIImage imageNamed:@"flashOff"]];
+            }else if( i == 2 || i == 3){
+                [button.imageView setImage:[UIImage imageNamed:@"yellowOff"]];
+            }else{
+                [button.imageView setImage:[UIImage imageNamed:@"lightOff"]];
             }
         }else{
             if (i == 0 || i == 1) {
-                [button.imageView setImage:[UIImage imageNamed:@"lightBlueOn"]];
-            }else if( i == 2 || i == 3){
-                [button.imageView setImage:[UIImage imageNamed:@"lightOn"]];
-            }else{
                 [button.imageView setImage:[UIImage imageNamed:@"flashOn"]];
+            }else if( i == 2 || i == 3){
+                [button.imageView setImage:[UIImage imageNamed:@"yellowOn"]];
+            }else{
+                [button.imageView setImage:[UIImage imageNamed:@"lightOn"]];
             }
         }
     }
