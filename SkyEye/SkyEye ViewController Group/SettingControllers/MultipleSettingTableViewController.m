@@ -200,7 +200,7 @@
             [label setHidden:NO];
             [labelVerison setHidden:NO];
             label.text = @"Version";
-            labelVerison.text = @"1.0.9";
+            labelVerison.text = @"1.1.0";
         }else if (indexPath.row == 1){
             [button setHidden:NO];
             sendReportButton = button;
